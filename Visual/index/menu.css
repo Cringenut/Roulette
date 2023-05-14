@@ -1,0 +1,37 @@
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.box-menu {
+    position:relative;
+    display: flex;
+    height: 15vh;
+    background-color: #0f0b2d;
+
+}
+
+.btn-logo {
+    position:absolute;
+    background-color: red;
+    border: none;
+    height: 50px;
+    width: 150px;
+
+    margin: auto;
+    background-image: url("png/logo.png");
+
+    left: 4%;
+    top: 50%;
+    transform: translate(0, -50%);
+
+}
+
+.img-logo {
+    position: absolute;
+    left: 5vh;
+
+    width: 150px;
+    height: auto;
+}
