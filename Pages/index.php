@@ -20,12 +20,13 @@
 
         <div class="box-holder">
             <img class="box-image" src="../Visual/index/png/main.png"  alt="Desc"/>
+                <a class="box-image" href="roulette.php" target="_self"></a>
             <div class="img-roulette">
                 <img class="img-roulette" src="../Visual/index/png/roulette.png"  alt="logo.png"/>
             </div>
             <div class="line"></div>>
-            <p class="text-bottom-play">PLAY NOW</p>
             <p class="text-bottom-desc">a timeless casino game, offers an exhilarating experience for players seeking the thrill of chance</p>
+            <p class="text-bottom-play">PLAY NOW</p>
         </div>
 
 

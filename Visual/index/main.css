@@ -62,7 +62,7 @@ body {
     left: 50%;
     max-height: 20vh;
 
-    margin-bottom: 10px;
+    margin-bottom: 4px;
     transform: translate(-50%);
 }
 
@@ -71,14 +71,39 @@ body {
     pointer-events: none;
     font-family: Bebas, serif;
     color: #ffcc00;
-    font-size: 44px;
+    font-size: 38px;
     text-align: center;
 
     bottom: 0;
     left: 50%;
     max-height: 20vh;
-    max-width: 840px;
+    max-width: 700px;
 
-    margin-bottom: 80px;
+    margin-bottom: 70px;
     transform: translate(-50%);
+}
+
+.text-bottom-play::before , .text-bottom-play::after {
+    content: "";
+    display: block;
+    height: 10px;
+    background-color: #ffcc00;
+
+    position: absolute;
+    top: 50%;
+
+    transform: translate(0, -50%);
+}
+
+.text-bottom-play::before {
+    right: calc(100% + 2vh);
+    width: 75vh;
+    z-index: -3;
+}
+
+.text-bottom-play::after {
+
+    left: calc(100% + 2vh);
+    width: 75vh;
+    z-index: -3;
 }
