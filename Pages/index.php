@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
     <head>
         <meta charset="UTF-8">
         <title>GoldenStar</title>
@@ -7,9 +7,12 @@
     </head>
 
     <body>
-        <div class="box-top">
-            <div class="box-down">
+        <div class="box-top"></div>
+        <div class="box-test">
+            <img class="box-image" src="./../Visual/index/test.png""  alt="Desc"/></div>
+
     </body>
+
 </html>
 
 
