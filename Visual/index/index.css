@@ -4,16 +4,3 @@ body {
     box-sizing: border-box;
 }
 
-.box-test {
-    position: absolute;
-    height: calc(100% - 15vh);
-    width: 100%;
-}
-
-.box-image {
-    position: absolute;
-    object-fit: cover;
-    height: 100%;
-    width: 100%;
-}
-

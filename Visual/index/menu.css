@@ -6,13 +6,12 @@ body {
 
 .box-menu {
     position:relative;
-    height: 15vh;
+    height: 12vh;
     background-color: #0f0b2d;
 }
 
 .btn-logo {
     position:absolute;
-    background-color: red;
     border: none;
     height: 130px;
     width: 240px;
@@ -29,10 +28,10 @@ body {
     flex-direction: column;
     pointer-events: none;
 
-    width: 120%;
+    width: 35vh;
     height: auto;
 
-    left: 50%;
+    margin-left: 14vh;
     top: 50%;
     transform: translate(-50%, -50%);
 }

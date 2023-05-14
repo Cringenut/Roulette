@@ -5,6 +5,7 @@
         <title>GoldenStar</title>
         <link href="./../Visual/index/index.css" rel="stylesheet" type="text/css">
         <link href="./../Visual/index/menu.css" rel="stylesheet" type="text/css">
+        <link href="./../Visual/index/main.css" rel="stylesheet" type="text/css">
     </head>
 
     <body>
@@ -13,13 +14,20 @@
                 <a class="btn-logo" href="index.php" target="_self"></a>
                 <div class="img-logo">
                     <img class="img-logo" src="../Visual/index/png/logo.png"  alt="logo.png"/>
+                </div>
             </div>
         </div>
+
+        <div class="box-holder">
+            <img class="box-image" src="../Visual/index/png/main.png"  alt="Desc"/>
+            <div class="img-roulette">
+                <img class="img-roulette" src="../Visual/index/png/roulette.png"  alt="logo.png"/>
+            </div>
+            <div class="line"></div>>
+            <p class="text-bottom-play">PLAY NOW</p>
+            <p class="text-bottom-desc">a timeless casino game, offers an exhilarating experience for players seeking the thrill of chance</p>
         </div>
 
-        <div class="box-test">
-            <img class="box-image" src="../Visual/index/png/test.png"  alt="Desc"/>
-        </div>
 
     </body>
 
