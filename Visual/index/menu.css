@@ -6,23 +6,18 @@ body {
 
 .box-menu {
     position:relative;
-    display: flex;
     height: 15vh;
     background-color: #0f0b2d;
-
 }
 
 .btn-logo {
     position:absolute;
     background-color: red;
     border: none;
-    height: 50px;
-    width: 150px;
+    height: 130px;
+    width: 240px;
 
-    margin: auto;
-    background-image: url("png/logo.png");
-
-    left: 4%;
+    left: 1.75%;
     top: 50%;
     transform: translate(0, -50%);
 
@@ -30,8 +25,14 @@ body {
 
 .img-logo {
     position: absolute;
-    left: 5vh;
+    display: flex;
+    flex-direction: column;
+    pointer-events: none;
 
-    width: 150px;
+    width: 120%;
     height: auto;
+
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
 }

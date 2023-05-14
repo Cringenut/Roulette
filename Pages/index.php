@@ -9,15 +9,17 @@
 
     <body>
         <div class="box-menu">
-            <a href="index.php" class="btn-logo"></a>
-
+            <div class="btn-logo">
+                <a class="btn-logo" href="index.php" target="_self"></a>
+                <div class="img-logo">
+                    <img class="img-logo" src="../Visual/index/png/logo.png"  alt="logo.png"/>
             </div>
         </div>
-
         </div>
 
         <div class="box-test">
-            <img class="box-image" src="../Visual/index/png/test.png""  alt="Desc"/></div>
+            <img class="box-image" src="../Visual/index/png/test.png"  alt="Desc"/>
+        </div>
 
     </body>
 
