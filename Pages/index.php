@@ -16,6 +16,8 @@
                     <img class="img-logo" src="../Visual/index/png/logo.png"  alt="logo.png"/>
                 </div>
             </div>
+
+            <div class="box-login"></div>
         </div>
 
         <div class="box-holder">
@@ -29,8 +31,8 @@
             <p class="text-bottom-play">PLAY NOW</p>
         </div>
 
-
     </body>
+
 
 </html>
 
