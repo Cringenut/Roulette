@@ -1,3 +1,9 @@
+@font-face {
+    src: url("../fonts/FontsFree-Net-arial-bold.ttf");
+    font-family: Arial Bold;
+}
+
+
 body {
     margin: 0;
     padding: 0;
@@ -14,7 +20,7 @@ body {
     position:absolute;
     border: none;
     height: 10vh;
-    width: 16vh;
+    width: 14vh;
 
     left: 12vh;
     top: 50%;
@@ -40,50 +46,57 @@ body {
     position: absolute;
     display: block;
     height: 5vh;
-    width: 0.75vh;
-    background-color: #ffcc00;
+    width: 16vh;
+    background-color: #140e4a;
 
-    margin-right: 18vh;
+    margin-right: 6vh;
     right: 0;
     top: 50%;
 
-    transform: translate(100%, -50%);
+    transform: translate(0%, -50%);
 }
 
 :root {
     --login-margin: 0.8vh
 }
 
-.box-login::before {
+.box-login::after {
     position: absolute;
 
     content: "SIGN IN";
     display: block;
     font-family: Bebas, serif;
     color: #ffcc00;
-    font-size: 6vh;
+    font-size: 4.4vh;
     overflow: hidden;
     white-space: nowrap;
 
-    margin-left: calc(0.75vh + var(--login-margin));
-    top: 50%;
+    left: 50%;
+    bottom: 43%;
 
-    transform: translate(0%, -47%);
+    width: auto;
+
+    transform: translate(-50%, 50%);
 }
 
-.box-login::after {
+.box-login::before {
     position: absolute;
+    pointer-events: none;
 
-    content: "LOG IN";
+    content: "SIGN UP";
     display: block;
     font-family: Bebas, serif;
     color: #ffcc00;
-    font-size: 6vh;
+    font-size: 4.4vh;
     overflow: hidden;
     white-space: nowrap;
 
-    margin-left: calc(-1* var(--login-margin));
-    top: 50%;
+    margin-left: -1.8vh;
+    bottom: 43%;
 
-    transform: translate(-100%, -47%);
+    transform: translate(-100%, 50%);
+}
+
+.btn-sign-up {
+
 }

@@ -16,7 +16,7 @@ body {
 
 .box-holder {
     position: absolute;
-    height: calc(100% - 12vh);
+    height: calc(100% - 10vh);
     width: 100%;
 }
 

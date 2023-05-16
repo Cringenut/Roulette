@@ -17,7 +17,7 @@
                 </div>
             </div>
 
-            <div class="box-login"></div>
+            <a class="box-login" href="index.php" target="_self"></a>
         </div>
 
         <div class="box-holder">
