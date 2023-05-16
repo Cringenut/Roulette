@@ -6,19 +6,19 @@ body {
 
 .box-menu {
     position:relative;
-    height: 12vh;
+    height: 10vh;
     background-color: #0f0b2d;
 }
 
 .btn-logo {
     position:absolute;
     border: none;
-    height: 130px;
-    width: 240px;
+    height: 10vh;
+    width: 16vh;
 
-    left: 1.75%;
+    left: 12vh;
     top: 50%;
-    transform: translate(0, -50%);
+    transform: translate(-50%, -50%);
 
 }
 
@@ -28,11 +28,11 @@ body {
     flex-direction: column;
     pointer-events: none;
 
-    width: 35vh;
+    width: 26vh;
     height: auto;
 
-    margin-left: 14vh;
     top: 50%;
+    left: 50%;
     transform: translate(-50%, -50%);
 }
 
