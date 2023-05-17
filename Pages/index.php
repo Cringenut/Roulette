@@ -18,6 +18,8 @@
             </div>
 
             <a class="box-login" href="index.php" target="_self"></a>
+            <a class="btn-sign-up" href="roulette.php" target="_self"></a>
+
         </div>
 
         <div class="box-holder">

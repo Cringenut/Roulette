@@ -98,5 +98,14 @@ body {
 }
 
 .btn-sign-up {
+    position: absolute;
+    display: block;
+    height: 5vh;
+    width: 16vh;
 
+    margin-right: 6vh;
+    right: 0;
+    top: 50%;
+
+    transform: translate(-100%, -50%);
 }
