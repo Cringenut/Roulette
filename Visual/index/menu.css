@@ -45,9 +45,10 @@ body {
 .box-login {
     position: absolute;
     display: block;
+    background-color: #140e4a;
+
     height: 5vh;
     width: 16vh;
-    background-color: #140e4a;
 
     margin-right: 6vh;
     right: 0;

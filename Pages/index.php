@@ -2,7 +2,7 @@
 <html lang="en">
     <head>
         <meta charset="UTF-8">
-        <title>GoldenStar</title>
+        <title>Golden Star</title>
         <link href="./../Visual/index/index.css" rel="stylesheet" type="text/css">
         <link href="./../Visual/index/menu.css" rel="stylesheet" type="text/css">
         <link href="./../Visual/index/main.css" rel="stylesheet" type="text/css">

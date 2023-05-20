@@ -1,0 +1,45 @@
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.box-holder-sign-in {
+    position: absolute;
+    background-color: #140e4a;
+
+    height: 100%;
+    width: 100%;
+}
+
+.img-logo-big {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    pointer-events: none;
+
+    width: auto;
+    height: 100%;
+
+    top: 50%;
+    left: 50%;
+
+    transform: translate(-50%, -50%);
+}
+
+.box-logo-holder {
+    position: absolute;
+    right: 0;
+    background-color: #140e4a;
+
+    width: 60%;
+    height: 100vh;
+}
+
+.box-login-holder {
+    position: absolute;
+    background-color: red;
+
+    width: 40%;
+    height: 100vh;
+}
