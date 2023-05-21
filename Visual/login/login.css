@@ -4,22 +4,13 @@ body {
     box-sizing: border-box;
 }
 
-.box-holder-sign-in {
-    position: absolute;
-    background-color: #140e4a;
-
-    height: 100%;
-    width: 100%;
-}
-
 .img-logo-big {
     position: absolute;
-    display: flex;
-    flex-direction: column;
+    overflow: hidden;
     pointer-events: none;
 
-    width: auto;
-    height: 100%;
+    width: 130%;
+    height: auto;
 
     top: 50%;
     left: 50%;
@@ -30,6 +21,7 @@ body {
 .box-logo-holder {
     position: absolute;
     right: 0;
+    overflow: hidden;
     background-color: #140e4a;
 
     width: 60%;
@@ -42,4 +34,47 @@ body {
 
     width: 40%;
     height: 100vh;
+}
+
+.text-login-field, .text-password-field {
+    position: absolute;
+    margin: auto;
+
+    width: 0;
+    height: 0;
+
+
+    left: 50%;
+    top: 50%;
+
+    transform: translate(-50%, -50%);
+}
+
+input[type=login], input[type=password] {
+    background-color: white;
+    margin: auto;
+
+    height: 60vh;
+    width: 15vh;
+
+    left: 50%;
+    top: 50%;
+
+    transform: translate(-50%, -50%);
+}
+
+input[type=login] {
+
+    left: 50%;
+    top: 50%;
+
+    transform: translate(-50%, -50%);
+}
+
+input[type=password] {
+
+    left: 50%;
+    top: 50%;
+
+    transform: translate(-50%, -50%);
 }
