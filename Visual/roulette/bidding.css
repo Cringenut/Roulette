@@ -1,0 +1,32 @@
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.flex-container-numbers {
+    display: flex;
+    flex-wrap: wrap;
+
+    width: 1020px;
+}
+
+.box-zero {
+    background-color: green;
+
+    width: 100px;
+    height: 384px;
+}
+
+.box-number-red, .box-number-green {
+    width: 85px;
+    height: 128px;
+}
+
+.box-number-red {
+    background-color: red;
+}
+
+.box-number-green {
+    background-color: green;
+}

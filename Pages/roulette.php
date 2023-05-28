@@ -1,18 +1,53 @@
-div{
-bac
-}
-
-
 <!DOCTYPE html>
 <html>
 <head>
     <meta charset="utf-8">
     <title>Roulette</title>
+    <link href="./../Visual/roulette/bidding.css" rel="stylesheet" type="text/css">
 
 </head>
 <body>
-<h1>Page1</h1>
-<a href="index.php">Index</a>
+    <div class="flex-container-numbers">
+        <div class="box-number-red"></div>
+        <div class="box-number-green"></div>
+        <div class="box-number-red"></div>
+        <div class="box-number-green"></div>
+        <div class="box-number-red"></div>
+        <div class="box-number-green"></div>
+        <div class="box-number-red"></div>
+        <div class="box-number-green"></div>
+        <div class="box-number-red"></div>
+        <div class="box-number-green"></div>
+        <div class="box-number-red"></div>
+        <div class="box-number-green"></div>
+
+        <div class="box-number-green"></div>
+        <div class="box-number-red"></div>
+        <div class="box-number-green"></div>
+        <div class="box-number-red"></div>
+        <div class="box-number-green"></div>
+        <div class="box-number-red"></div>
+        <div class="box-number-green"></div>
+        <div class="box-number-red"></div>
+        <div class="box-number-green"></div>
+        <div class="box-number-red"></div>
+        <div class="box-number-green"></div>
+        <div class="box-number-red"></div>
+
+        <div class="box-number-red"></div>
+        <div class="box-number-green"></div>
+        <div class="box-number-red"></div>
+        <div class="box-number-green"></div>
+        <div class="box-number-red"></div>
+        <div class="box-number-green"></div>
+        <div class="box-number-red"></div>
+        <div class="box-number-green"></div>
+        <div class="box-number-red"></div>
+        <div class="box-number-green"></div>
+        <div class="box-number-red"></div>
+        <div class="box-number-green"></div>
+    </div>
+
 </body>
 
 </html>
