@@ -46,6 +46,10 @@
         <div class="box-number-green"></div>
         <div class="box-number-red"></div>
         <div class="box-number-green"></div>
+
+        <div class="box-number-part"></div>
+        <div class="box-number-part"></div>
+        <div class="box-number-part"></div>
     </div>
 
 </body>
