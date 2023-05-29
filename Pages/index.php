@@ -18,13 +18,13 @@
             </div>
 
             <a class="box-login" href="index.php" target="_self"></a>
-            <a class="btn-sign-up" href="roulette.php" target="_self"></a>
+            <a class="btn-sign-up" href="bidding.php" target="_self"></a>
 
         </div>
 
         <div class="box-holder">
             <img class="box-image" src="../Visual/index/png/main.png"  alt="Desc"/>
-                <a class="box-image" href="roulette.php" target="_self"></a>
+                <a class="box-image" href="bidding.php" target="_self"></a>
             <div class="img-roulette">
                 <img class="img-roulette" src="../Visual/index/png/roulette.png"  alt="logo.png"/>
             </div>

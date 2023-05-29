@@ -5,7 +5,13 @@ body {
 }
 
 .flex-container-bidding {
+    position: absolute;
     display: flex;
+
+    left: 50%;
+    top: 50%;
+
+    transform: translate(-50%, -50%);
 }
 
 .flex-container-numbers {
@@ -39,12 +45,12 @@ body {
     background-color: black;
 
     width: 340px;
-    height: 128px;
+    height: 110px;
 }
 
 .box-range-small {
     background-color: yellowgreen;
 
     width: 170px;
-    height: 128px;
+    height: 110px;
 }
