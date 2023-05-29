@@ -7,49 +7,63 @@
 
 </head>
 <body>
-    <div class="flex-container-numbers">
-        <div class="box-number-red"></div>
-        <div class="box-number-green"></div>
-        <div class="box-number-red"></div>
-        <div class="box-number-green"></div>
-        <div class="box-number-red"></div>
-        <div class="box-number-green"></div>
-        <div class="box-number-red"></div>
-        <div class="box-number-green"></div>
-        <div class="box-number-red"></div>
-        <div class="box-number-green"></div>
-        <div class="box-number-red"></div>
-        <div class="box-number-green"></div>
+    <div class="flex-container-bidding">
+        <div class="box-zero"></div>
+        <div class="flex-container-numbers">
+            <div class="box-number-red"></div>
+            <div class="box-number-green"></div>
+            <div class="box-number-red"></div>
+            <div class="box-number-green"></div>
+            <div class="box-number-red"></div>
+            <div class="box-number-green"></div>
+            <div class="box-number-red"></div>
+            <div class="box-number-green"></div>
+            <div class="box-number-red"></div>
+            <div class="box-number-green"></div>
+            <div class="box-number-red"></div>
+            <div class="box-number-green"></div>
 
-        <div class="box-number-green"></div>
-        <div class="box-number-red"></div>
-        <div class="box-number-green"></div>
-        <div class="box-number-red"></div>
-        <div class="box-number-green"></div>
-        <div class="box-number-red"></div>
-        <div class="box-number-green"></div>
-        <div class="box-number-red"></div>
-        <div class="box-number-green"></div>
-        <div class="box-number-red"></div>
-        <div class="box-number-green"></div>
-        <div class="box-number-red"></div>
+            <div class="box-number-green"></div>
+            <div class="box-number-red"></div>
+            <div class="box-number-green"></div>
+            <div class="box-number-red"></div>
+            <div class="box-number-green"></div>
+            <div class="box-number-red"></div>
+            <div class="box-number-green"></div>
+            <div class="box-number-red"></div>
+            <div class="box-number-green"></div>
+            <div class="box-number-red"></div>
+            <div class="box-number-green"></div>
+            <div class="box-number-red"></div>
 
-        <div class="box-number-red"></div>
-        <div class="box-number-green"></div>
-        <div class="box-number-red"></div>
-        <div class="box-number-green"></div>
-        <div class="box-number-red"></div>
-        <div class="box-number-green"></div>
-        <div class="box-number-red"></div>
-        <div class="box-number-green"></div>
-        <div class="box-number-red"></div>
-        <div class="box-number-green"></div>
-        <div class="box-number-red"></div>
-        <div class="box-number-green"></div>
+            <div class="box-number-red"></div>
+            <div class="box-number-green"></div>
+            <div class="box-number-red"></div>
+            <div class="box-number-green"></div>
+            <div class="box-number-red"></div>
+            <div class="box-number-green"></div>
+            <div class="box-number-red"></div>
+            <div class="box-number-green"></div>
+            <div class="box-number-red"></div>
+            <div class="box-number-green"></div>
+            <div class="box-number-red"></div>
+            <div class="box-number-green"></div>
 
-        <div class="box-number-part"></div>
-        <div class="box-number-part"></div>
-        <div class="box-number-part"></div>
+            <div class="box-number-part"></div>
+            <div class="box-number-part"></div>
+            <div class="box-number-part"></div>
+
+            <div class="box-range-big"></div>
+            <div class="box-range-big"></div>
+            <div class="box-range-big"></div>
+
+            <div class="box-range-small"></div>
+            <div class="box-range-small"></div>
+            <div class="box-range-small"></div>
+            <div class="box-range-small"></div>
+            <div class="box-range-small"></div>
+            <div class="box-range-small"></div>
+        </div>
     </div>
 
 </body>

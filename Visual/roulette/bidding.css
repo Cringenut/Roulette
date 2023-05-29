@@ -4,6 +4,10 @@ body {
     box-sizing: border-box;
 }
 
+.flex-container-bidding {
+    display: flex;
+}
+
 .flex-container-numbers {
     display: flex;
     flex-wrap: wrap;
@@ -12,7 +16,7 @@ body {
 }
 
 .box-zero {
-    background-color: green;
+    background-color: orange;
 
     width: 100px;
     height: 384px;
@@ -31,9 +35,16 @@ body {
     background-color: green;
 }
 
-.box-number-part {
+.box-range-big {
     background-color: black;
 
     width: 340px;
+    height: 128px;
+}
+
+.box-range-small {
+    background-color: yellowgreen;
+
+    width: 170px;
     height: 128px;
 }
