@@ -4,7 +4,7 @@
         <meta charset="UTF-8">
         <title>Golden Star</title>
         <link href="./../Visual/index/index.css" rel="stylesheet" type="text/css">
-        <link href="./../Visual/index/menu.css" rel="stylesheet" type="text/css">
+        <link href="../Visual/menu.css" rel="stylesheet" type="text/css">
         <link href="./../Visual/index/main.css" rel="stylesheet" type="text/css">
     </head>
 
@@ -17,8 +17,8 @@
                 </div>
             </div>
 
-            <a class="box-login" href="index.php" target="_self"></a>
-            <a class="btn-sign-up" href="bidding.php" target="_self"></a>
+            <a class="box-login" href="login.php" target="_self"></a>
+            <a class="btn-sign-up" href="registration.php" target="_self"></a>
 
         </div>
 
