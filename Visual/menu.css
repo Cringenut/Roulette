@@ -1,6 +1,11 @@
 @font-face {
-    src: url("fonts/FontsFree-Net-arial-bold.ttf");
-    font-family: Arial Bold;
+    src: url("fonts/BebasNeue-Regular.otf");
+    font-family: Bebas;
+}
+
+@font-face {
+    src: url("fonts/CadillacPersonalUseItalic-K7pny.ttf");
+    font-family: CADILLAC;
 }
 
 
@@ -30,8 +35,6 @@ body {
 
 .img-logo {
     position: absolute;
-    display: flex;
-    flex-direction: column;
     pointer-events: none;
 
     width: 26vh;

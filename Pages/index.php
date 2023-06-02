@@ -10,8 +10,8 @@
 
     <body>
         <div class="box-menu">
-            <div class="btn-logo">
-                <a class="btn-logo" href="index.php" target="_self"></a>
+            <div class="btn-logo"></div>
+                <a class="btn-logo" href="index.php" target="_self">
                 <div class="img-logo">
                     <img class="img-logo" src="../Visual/index/png/logo.png"  alt="logo.png"/>
                 </div>
