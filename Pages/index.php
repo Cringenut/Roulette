@@ -15,12 +15,12 @@
                 <div class="img-logo">
                     <img class="img-logo" src="../Visual/index/png/logo.png"  alt="logo.png"/>
                 </div>
-            </div>
+
 
             <a class="box-login" href="login.php" target="_self"></a>
             <a class="btn-sign-up" href="registration.php" target="_self"></a>
-
         </div>
+
 
         <div class="box-holder">
             <img class="box-image" src="../Visual/index/png/main.png"  alt="Desc"/>
