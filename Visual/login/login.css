@@ -1,3 +1,8 @@
+@font-face {
+    src: url("../fonts/BebasNeue-Regular.otf");
+    font-family: Bebas;
+}
+
 body {
     margin: 0;
     padding: 0;

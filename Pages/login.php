@@ -11,6 +11,7 @@
     </div>
 
     <div class="box-login-holder">
+        <p style="font-family:Bebas; font-size:70px; color:white" >LOGIN</p>
         <div class="box-text-login"></div>
         <div class="break"></div>
         <div class="box-text-login1"></div>
