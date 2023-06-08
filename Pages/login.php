@@ -11,11 +11,10 @@
     </div>
 
     <div class="box-login-holder">
-        <div class="text-login-field"</div>
-        <div class="break"</div>
-        <div class="text-login-field"</div>
+        <div class="box-text-login"></div>
+        <div class="break"></div>
+        <div class="box-text-login1"></div>
     </div>
-
 
 </head>
 
