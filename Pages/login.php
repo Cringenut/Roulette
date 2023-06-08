@@ -12,10 +12,10 @@
 
     <div class="box-login-holder">
         <div class="text-login-field"</div>
-            <input type="login">
-        <div class="text-password-field"</div>
-            <input type="password">
+        <div class="break"</div>
+        <div class="text-login-field"</div>
     </div>
+
 
 </head>
 
