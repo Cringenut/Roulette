@@ -39,6 +39,11 @@ body {
     width: auto;
 }
 
+.break-login-register {
+    height: 6vh;
+    width: auto;
+}
+
 .box-login-holder {
     display: flex;
     flex-direction: column;
@@ -52,7 +57,6 @@ body {
     top: 50%;
 
     align-items: center;
-    justify-content: center;
 
     transform: translate(0%, -50%);
 }
@@ -71,4 +75,31 @@ body {
 
     height: 6vh;
     width: 46vh;
+}
+
+.box-login-register-holder {
+    display: flex;
+
+    height: 8vh;
+    width: auto;
+
+}
+
+.btn-sign-up, .btn-sign-in {
+    height: 6vh;
+    width: 20vh;
+
+}
+
+.btn-sign-up {
+    background-color: green;
+}
+
+.btn-sign-in {
+    background-color: yellow;
+}
+
+
+.btn-sign-up::after {
+
 }
