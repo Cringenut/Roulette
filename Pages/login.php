@@ -13,10 +13,13 @@
     <div class="box-login-holder">
         <div class="box-login-register-holder">
             <div class="btn-sign-up"></div>
+            <div class="break-login-register"></div>
             <div class="btn-sign-in"></div>
         </div>
 
-        <p style="font-family:Bebas; font-size:70px; color:white" >LOGIN</p>
+        <div class="box-login-text">
+            <div class="text-login"</div></div>
+        </div>
         <div class="box-text-login"></div>
         <div class="break"></div>
         <div class="box-text-login1"></div>
