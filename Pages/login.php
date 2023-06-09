@@ -18,7 +18,7 @@
         </div>
 
         <div class="box-login-text">
-            <div class="text-login"</div></div>
+            <div class="text-login"</div>LOGIN</div>
         </div>
         <div class="box-text-login"></div>
         <div class="break"></div>

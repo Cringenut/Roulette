@@ -81,6 +81,7 @@ body {
     position: absolute;
     content: "SIGN IN";
     display: block;
+    text-align: center;
     font-family: Bebas, serif;
     color: green; font-size: 4.4vh;
 
@@ -89,9 +90,10 @@ body {
     height: 4vh;
 
     left: 50%;
-    top: 32.5%;
+    top: 20%;
 
-    transform: translate(-50%, -50%);
+
+    transform: translate(-50%, 0%);
 }
 
 .box-text-login {
