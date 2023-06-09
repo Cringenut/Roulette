@@ -12,9 +12,9 @@
 
     <div class="box-login-holder">
         <div class="box-login-register-holder">
-            <div class="btn-sign-up"></div>
+            <div class="btn-sign-up-select"></div>
             <div class="break-login-register"></div>
-            <div class="btn-sign-in"></div>
+            <div class="btn-sign-in-select"></div>
         </div>
 
         <div class="box-login-text">
@@ -23,6 +23,8 @@
         <div class="box-text-login"></div>
         <div class="break"></div>
         <div class="box-text-login1"></div>
+        <div class="break"></div>
+        <div class="btn-sign-up"></div>
     </div>
 
 </head>

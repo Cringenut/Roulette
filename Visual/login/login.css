@@ -37,12 +37,13 @@ body {
 .box-login-holder {
     display: flex;
     flex-direction: column;
+    overflow: hidden;
 
     position: absolute;
     background-color: red;
 
     width: 45%;
-    height: 40vh;
+    height: 50vh;
 
     top: 50%;
 
@@ -58,16 +59,16 @@ body {
     width: auto;
 }
 
-.btn-sign-up, .btn-sign-in {
+.btn-sign-up-select, .btn-sign-in-select {
     height: 6vh;
     width: 16vh;
 }
 
-.btn-sign-up {
+.btn-sign-up-select {
     background-color: green;
 }
 
-.btn-sign-in {
+.btn-sign-in-select {
     background-color: yellow;
 }
 
@@ -78,12 +79,14 @@ body {
 
 .text-login {
     position: absolute;
+    content: "SIGN IN";
+    display: block;
+    font-family: Bebas, serif;
+    color: green; font-size: 4.4vh;
 
-    content: "TEXT";
-    background-color: #6a6f8c;
 
-    width: 2vh;
-    height: 2vh;
+    width: 12vh;
+    height: 4vh;
 
     left: 50%;
     top: 32.5%;
@@ -110,4 +113,12 @@ body {
 
     height: 6vh;
     width: 46vh;
+}
+
+.btn-sign-up {
+    background-color: white;
+    border-radius:0.5em;
+
+    height: 6vh;
+    width: 20vh;
 }
