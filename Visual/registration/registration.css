@@ -68,13 +68,22 @@ body {
 
 .btn-sign-up-select, .btn-sign-in-select {
     background-color: #140e4a;
+    border-radius:0.5em;
 
     height: 6vh;
     width: 20vh;
 
-    border-radius:0.5em;
-    border-style: solid;
-    border-width: 0.4vh;
+}
+
+.btn-sign-up-select {
+    outline: solid 0.4vh;
+    color: #1f1f68;
+}
+
+
+
+.btn-sign-in-select, .btn-sign-up-select:hover {
+    outline: solid 0.4vh;
     color: #ffcc00;
 }
 

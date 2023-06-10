@@ -14,6 +14,7 @@
     </div>
 
     <div class="box-login-holder">
+        <div class="break"></div>
         <div class="box-login-register-holder">
             <div class="btn-sign-up-select"></div>
             <div class="break-login-register"></div>
