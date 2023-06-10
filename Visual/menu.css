@@ -50,6 +50,7 @@ body {
     position: absolute;
     display: block;
     background-color: #140e4a;
+    border-radius:0.5em;
 
     height: 5vh;
     width: 16vh;
@@ -113,4 +114,13 @@ body {
     top: 50%;
 
     transform: translate(-100%, -50%);
+}
+
+
+.line {
+    position: absolute;
+    background-color: #ffcc00;
+
+    height: 6px;
+    width: 100%;
 }

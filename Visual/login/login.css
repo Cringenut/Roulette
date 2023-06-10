@@ -28,7 +28,7 @@ body {
     position: absolute;
     right: 0;
     overflow: hidden;
-    background-color: #140e4a;
+    background-color: #0f0b2d;
 
     width: 55%;
     height: 100vh;
@@ -40,7 +40,7 @@ body {
     overflow: hidden;
 
     position: absolute;
-    background-color: red;
+    background-color: #0f0b2d;
 
     width: 45%;
     height: 52vh;
@@ -61,15 +61,13 @@ body {
 
 .btn-sign-up-select, .btn-sign-in-select {
     height: 6vh;
-    width: 16vh;
+    width: 20vh;
+
+    border-radius:0.5em;
 }
 
-.btn-sign-up-select {
-    background-color: green;
-}
-
-.btn-sign-in-select {
-    background-color: yellow;
+.btn-sign-up-select, .btn-sign-in-select {
+    background-color: #140e4a;
 }
 
 .box-login-text {
@@ -79,11 +77,13 @@ body {
 
 .text-login {
     position: absolute;
+    pointer-events: none;
     content: "SIGN IN";
     display: block;
     text-align: center;
     font-family: Bebas, serif;
-    color: green; font-size: 4.4vh;
+    color: #ffcc00;
+    font-size: 4.4vh;
 
 
     width: 12vh;
@@ -96,12 +96,15 @@ body {
     transform: translate(-50%, 0%);
 }
 
-.box-text-login {
+input[type=text], input[type=password] {
     background-color: white;
     border-radius:2.5em;
 
+    padding-left: 2.2vh;
+    font-size: 2.4vh;
+
     height: 6vh;
-    width: 46vh;
+    width: 42vh;
 }
 
 .break {
@@ -109,18 +112,32 @@ body {
     width: auto;
 }
 
-.box-text-login1 {
-    background-color: white;
-    border-radius:2.5em;
-
-    height: 6vh;
-    width: 46vh;
+.break-login-register {
+    height: 2vh;
+    width: 3.6vh;
 }
 
 .btn-sign-up {
-    background-color: white;
+    background-color: #140e4a;
     border-radius:0.5em;
 
     height: 6vh;
     width: 20vh;
+}
+
+.btn-sign-up::before {
+    position: absolute;
+    pointer-events: none;
+
+    content: "SIGN UP";
+    display: block;
+    font-family: Bebas, serif;
+    color: #ffcc00;
+    font-size: 4.4vh;
+    overflow: hidden;
+    white-space: nowrap;
+
+    left: 50%;
+
+    transform: translate(-50%, 10%);
 }

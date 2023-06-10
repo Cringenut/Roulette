@@ -21,8 +21,11 @@
             <div class="text-login"</div>LOGIN</div>
         </div>
         <div class="box-text-login"></div>
+            <input type="text" placeholder="Login">
         <div class="break"></div>
         <div class="box-text-login1"></div>
+            <input type="password" placeholder="Password">
+        <div class="break"></div>
         <div class="break"></div>
         <div class="btn-sign-up"></div>
     </div>

@@ -27,14 +27,6 @@ body {
     width: 100%;
 }
 
-.line {
-    position: absolute;
-    background-color: #ffcc00;
-
-    height: 6px;
-    width: 100%;
-}
-
 .img-roulette {
     position: absolute;
     pointer-events: none;

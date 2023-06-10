@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta charset="utf-8">
-    <title>Roulette</title>
+    <title>Bidding</title>
     <link href="./../Visual/roulette/bidding.css" rel="stylesheet" type="text/css">
     <link href="../Visual/menu.css" rel="stylesheet" type="text/css">
 
@@ -15,9 +15,9 @@
                 <img class="img-logo" src="../Visual/index/png/logo.png"  alt="logo.png"/>
             </div>
 
-
             <a class="box-login" href="login.php" target="_self"></a>
             <a class="btn-sign-up" href="registration.php" target="_self"></a>
+
 
             <div class="box-holder">
     </div>
