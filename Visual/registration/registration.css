@@ -66,7 +66,7 @@ body {
     width: auto;
 }
 
-.btn-sign-up-select, .btn-sign-in-select {
+.btn-sign-in-select, .btn-sign-up-select {
     background-color: #140e4a;
     border-radius:0.5em;
 
@@ -75,15 +75,51 @@ body {
 
 }
 
-.btn-sign-up-select {
+.text-sign-in {
+    position: absolute;
+    user-select: none;
+    content: "SIGN UP";
+    display: block;
+    text-align: center;
+    font-family: Bebas, serif;
+    color: #1f1f68;
+    font-size: 4.4vh;
+
+
+    width: 20vh;
+    height: 4vh;
+
+    top: 5%;
+}
+
+.text-sign-up {
+    position: absolute;
+    user-select: none;
+    content: "SIGN UP";
+    display: block;
+    text-align: center;
+    font-family: Bebas, serif;
+    color: #ffcc00;
+    font-size: 4.4vh;
+
+
+    width: 20vh;
+    height: 4vh;
+
+    top: 5%;
+}
+
+.btn-sign-in-select {
     outline: solid 0.4vh;
     color: #1f1f68;
 }
 
-
-
-.btn-sign-in-select, .btn-sign-up-select:hover {
+.btn-sign-up-select, .btn-sign-in-select:hover {
     outline: solid 0.4vh;
+    color: #ffcc00;
+}
+
+.btn-sign-in-select:hover .text-sign-in {
     color: #ffcc00;
 }
 
@@ -135,15 +171,15 @@ input[type=text], input[type=password] {
 }
 
 .btn-sign-up {
-    background-color: #140e4a;
-    border-radius:0.5em;
+    background-color: #1f1f68;
+    border-radius:1.5em;
 
     height: 6vh;
     width: 20vh;
 
     border-style: solid;
     border-width: 0.4vh;
-    color: #ffcc00;
+    color: #1f1f68;
 }
 
 .btn-sign-up::before {
@@ -153,7 +189,7 @@ input[type=text], input[type=password] {
     content: "SIGN UP";
     display: block;
     font-family: Bebas, serif;
-    color: #ffcc00;
+    color: #140e4a;
     font-size: 4.4vh;
     overflow: hidden;
     white-space: nowrap;
