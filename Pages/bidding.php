@@ -9,6 +9,7 @@
 </head>
     <body>
     <div class="box-menu">
+        <div class="line"
         <div class="btn-logo"></div>
         <a class="btn-logo" href="index.php" target="_self">
             <div class="img-logo">
@@ -20,7 +21,11 @@
 
 
             <div class="box-holder">
+
     </div>
+
+
+
     </div>
     <div class="box-holder">
         <div class="flex-container-bidding">

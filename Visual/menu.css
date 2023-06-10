@@ -121,6 +121,10 @@ body {
     position: absolute;
     background-color: #ffcc00;
 
-    height: 6px;
+    height: 7px;
     width: 100%;
+
+    margin-top: 10vh;
+
+    transform: translate(0, -100%);
 }
