@@ -1,3 +1,8 @@
+@font-face {
+    src: url("../fonts/BebasNeue-Regular.otf");
+    font-family: Bebas;
+}
+
 body {
     margin: 0;
     padding: 0;
@@ -29,67 +34,93 @@ body {
     height: 100vh;
 }
 
-.box-registration-holder {
+.box-login-holder {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+
     position: absolute;
-    background-color: #140e4a;
+    background-color: red;
 
     width: 45%;
-    height: 100vh;
-}
+    height: 52vh;
 
-.text-login-field, .text-password-field, .text-email-field {
-    position: absolute;
-    margin: auto;
-
-    width: 0;
-    height: 0;
-
-
-    left: 50%;
     top: 50%;
 
-    transform: translate(-50%, -50%);
+    align-items: center;
+
+    transform: translate(0%, -50%);
 }
 
-input[type=login], input[type=password], input[type=email] {
+.box-login-register-holder {
+    display: flex;
+
+    height: auto;
+    width: auto;
+}
+
+.btn-sign-up-select, .btn-sign-in-select {
+    height: 6vh;
+    width: 16vh;
+}
+
+.btn-sign-up-select {
+    background-color: green;
+}
+
+.btn-sign-in-select {
+    background-color: yellow;
+}
+
+.box-login-text {
+    height: 13vh;
+    width: 30vh;
+}
+
+.text-login {
+    position: absolute;
+    content: "SIGN IN";
+    display: block;
+    text-align: center;
+    font-family: Bebas, serif;
+    color: green; font-size: 4.4vh;
+
+
+    width: 24vh;
+    height: 4vh;
+
+    left: 50%;
+    top: 20%;
+
+
+    transform: translate(-50%, 0%);
+}
+
+.box-text-login {
     background-color: white;
-    margin: auto;
+    border-radius:2.5em;
 
     height: 6vh;
     width: 46vh;
-
-    left: 50%;
-    top: 50%;
-
-    transform: translate(-50%, -50%);
 }
 
-input[type=email] {
-
-    left: 50%;
-    top: 50%;
-
-    margin-top: 26vh;
-
-    transform: translate(-50%, -50%);
+.break {
+    height: 2vh;
+    width: auto;
 }
 
-input[type=login] {
+.box-text-login1 {
+    background-color: white;
+    border-radius:2.5em;
 
-    left: 50%;
-    top: 50%;
-
-    margin-top: 16vh;
-
-    transform: translate(-50%, -50%);
+    height: 6vh;
+    width: 46vh;
 }
 
-input[type=password] {
+.btn-sign-up {
+    background-color: white;
+    border-radius:0.5em;
 
-    left: 50%;
-    top: 50%;
-
-    margin-top: -6vh;
-
-    transform: translate(-50%, -50%);
+    height: 6vh;
+    width: 20vh;
 }
