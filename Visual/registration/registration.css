@@ -1,0 +1,155 @@
+@font-face {
+    src: url("../fonts/BebasNeue-Regular.otf");
+    font-family: Bebas;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.img-background {
+    position: absolute;
+    overflow: hidden;
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+
+}
+
+.img-logo-big {
+    position: absolute;
+    overflow: hidden;
+    pointer-events: none;
+
+    width: 200%;
+    height: auto;
+
+    top: 50%;
+    left: 50%;
+    margin-left: -2vh;
+
+    transform: translate(-50%, -50%);
+}
+
+.box-logo-holder {
+    position: absolute;
+    right: 0;
+    overflow: hidden;
+
+    width: 55%;
+    height: 100vh;
+}
+
+.box-login-holder {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+
+    position: absolute;
+
+    width: 45%;
+    height: 52vh;
+
+    top: 50%;
+
+    align-items: center;
+
+    transform: translate(0%, -50%);
+}
+
+.box-login-register-holder {
+    display: flex;
+
+    height: auto;
+    width: auto;
+}
+
+.btn-sign-up-select, .btn-sign-in-select {
+    background-color: #140e4a;
+
+    height: 6vh;
+    width: 20vh;
+
+    border-radius:0.5em;
+    border-style: solid;
+    border-width: 0.4vh;
+    color: #ffcc00;
+}
+
+.box-login-text {
+    height: 12vh;
+    width: 14vh;
+}
+
+.text-login {
+    position: absolute;
+    pointer-events: none;
+    content: "SIGN IN";
+    display: block;
+    text-align: center;
+    font-family: Bebas, serif;
+    color: #ffcc00;
+    font-size: 4.4vh;
+
+
+    width: 20vh;
+    height: 4vh;
+
+    left: 50%;
+    top: 20%;
+
+
+    transform: translate(-50%, 0%);
+}
+
+input[type=text], input[type=password] {
+    background-color: white;
+    border-radius:2.5em;
+
+    padding-left: 2.2vh;
+    font-size: 2.4vh;
+
+    height: 6vh;
+    width: 42vh;
+}
+
+.break {
+    height: 2vh;
+    width: auto;
+}
+
+.break-login-register {
+    height: 2vh;
+    width: 3.6vh;
+}
+
+.btn-sign-up {
+    background-color: #140e4a;
+    border-radius:0.5em;
+
+    height: 6vh;
+    width: 20vh;
+
+    border-style: solid;
+    border-width: 0.4vh;
+    color: #ffcc00;
+}
+
+.btn-sign-up::before {
+    position: absolute;
+    pointer-events: none;
+
+    content: "SIGN UP";
+    display: block;
+    font-family: Bebas, serif;
+    color: #ffcc00;
+    font-size: 4.4vh;
+    overflow: hidden;
+    white-space: nowrap;
+
+    left: 50%;
+
+    transform: translate(-50%, 10%);
+}

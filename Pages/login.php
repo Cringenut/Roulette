@@ -5,6 +5,9 @@
     <title>Golden Star: login</title>
     <link href="./../Visual/login/login.css" rel="stylesheet" type="text/css">
 
+    <div class="img-background">
+        <img class="img-background" src="../Visual/login/png/login.png"  alt="logo.png"/>
+    </div>
 
     <div class="box-logo-holder">
         <img class="img-logo-big" src="../Visual/index/png/logo.png"  alt="logo.png"/>
@@ -29,6 +32,7 @@
         <div class="break"></div>
         <div class="btn-sign-up"></div>
     </div>
+
 
 </head>
 
