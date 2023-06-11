@@ -10,6 +10,10 @@ body {
 }
 
 .img-background {
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    user-select: none;
+
     position: absolute;
     overflow: hidden;
     object-fit: cover;
@@ -19,6 +23,10 @@ body {
 }
 
 .img-logo-big {
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    user-select: none;
+
     position: absolute;
     overflow: hidden;
     pointer-events: none;
@@ -50,46 +58,91 @@ body {
     position: absolute;
 
     width: 45%;
-    height: 52vh;
+    height: 58vh;
 
-    top: 50%;
+    top: calc(50% + 3vh);
 
     align-items: center;
 
     transform: translate(0%, -50%);
 }
 
-.box-login-register-holder {
+.box-register-login-holder {
     display: flex;
 
     height: auto;
     width: auto;
 }
 
-.btn-sign-up-select, .btn-sign-in-select {
+.btn-sign-in-select, .btn-sign-up-select {
+    background-color: #140e4a;
+    border-radius:0.5em;
+
     height: 6vh;
     width: 20vh;
 
-    border-radius:0.5em;
-    border-style: solid;
-    border-width: 0.4vh;
+}
+
+.text-sign-up {
+    position: absolute;
+    user-select: none;
+    content: "SIGN UP";
+    display: block;
+    text-align: center;
+    font-family: Bebas, serif;
+    color: #1f1f68;
+    font-size: 4.4vh;
+
+
+    width: 20vh;
+    height: 4vh;
+
+    top: 5%;
+}
+
+.text-sign-in {
+    position: absolute;
+    user-select: none;
+    content: "SIGN UP";
+    display: block;
+    text-align: center;
+    font-family: Bebas, serif;
+    color: #ffcc00;
+    font-size: 4.4vh;
+
+
+    width: 20vh;
+    height: 4vh;
+
+    top: 5%;
+}
+
+.btn-sign-in-select {
+    outline: solid 0.4vh;
+    color: #1f1f68;
+}
+
+.btn-sign-in-select, .btn-sign-up-select:hover {
+    outline: solid 0.4vh;
     color: #ffcc00;
 }
 
-.btn-sign-up-select, .btn-sign-in-select {
-    background-color: #140e4a;
+.btn-sign-up-select:hover .text-sign-up {
+    color: #ffcc00;
 }
 
-.box-login-text {
-    height: 12vh;
+.box-registration-text {
+    height: 10vh;
     width: 14vh;
 }
 
 .text-login {
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    user-select: none;
+
     position: absolute;
     pointer-events: none;
-    content: "SIGN IN";
-    display: block;
     text-align: center;
     font-family: Bebas, serif;
     color: #ffcc00;
@@ -127,26 +180,26 @@ input[type=text], input[type=password] {
     width: 3.6vh;
 }
 
-.btn-sign-up {
-    background-color: #140e4a;
-    border-radius:0.5em;
+.btn-sign-in {
+    background-color: #1f1f68;
+    border-radius:1.5em;
 
     height: 6vh;
     width: 20vh;
 
     border-style: solid;
     border-width: 0.4vh;
-    color: #ffcc00;
+    color: #1f1f68;
 }
 
-.btn-sign-up::before {
+.btn-sign-in::before {
     position: absolute;
-    pointer-events: none;
+    user-select: none;
 
     content: "SIGN IN";
     display: block;
     font-family: Bebas, serif;
-    color: #ffcc00;
+    color: #140e4a;
     font-size: 4.4vh;
     overflow: hidden;
     white-space: nowrap;

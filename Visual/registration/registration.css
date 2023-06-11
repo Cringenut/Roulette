@@ -10,6 +10,10 @@ body {
 }
 
 .img-background {
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    user-select: none;
+
     position: absolute;
     overflow: hidden;
     object-fit: cover;
@@ -19,6 +23,10 @@ body {
 }
 
 .img-logo-big {
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    user-select: none;
+
     position: absolute;
     overflow: hidden;
     pointer-events: none;
@@ -42,7 +50,7 @@ body {
     height: 100vh;
 }
 
-.box-login-holder {
+.box-registration-holder {
     display: flex;
     flex-direction: column;
     overflow: hidden;
@@ -50,16 +58,16 @@ body {
     position: absolute;
 
     width: 45%;
-    height: 52vh;
+    height: 58vh;
 
-    top: 50%;
+    top: calc(50% + 3vh);
 
     align-items: center;
 
     transform: translate(0%, -50%);
 }
 
-.box-login-register-holder {
+.box-register-login-holder {
     display: flex;
 
     height: auto;
@@ -123,16 +131,18 @@ body {
     color: #ffcc00;
 }
 
-.box-login-text {
-    height: 12vh;
+.box-registration-text {
+    height: 10vh;
     width: 14vh;
 }
 
-.text-login {
+.text-registration {
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    user-select: none;
+
     position: absolute;
     pointer-events: none;
-    content: "SIGN IN";
-    display: block;
     text-align: center;
     font-family: Bebas, serif;
     color: #ffcc00;
@@ -184,7 +194,7 @@ input[type=text], input[type=password] {
 
 .btn-sign-up::before {
     position: absolute;
-    pointer-events: none;
+    user-select: none;
 
     content: "SIGN UP";
     display: block;
@@ -197,4 +207,8 @@ input[type=text], input[type=password] {
     left: 50%;
 
     transform: translate(-50%, 10%);
+}
+
+input[type="checkbox"] {
+
 }
