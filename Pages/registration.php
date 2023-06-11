@@ -30,19 +30,18 @@
         <div class="box-registration-text">
             <div class="text-registration"</div>REGISTRATION</div>
     </div>
-    <input type="text" name="email" id="email" onkeyup="checkEmail(this.value);" placeholder="E-mail">
+    <input type="text" name="email" id="email" onkeyup="check(this.value);" placeholder="E-mail">
     <div class="break"></div>
-    <input type="text" placeholder="Login">
+    <input type="text" name="login" id="login" onkeyup="check(this.value);" placeholder="Login">
     <div class="break"></div>
-    <input type="password" placeholder="Password">
+    <input type="text" name="password" id="password" onkeyup="check(this.value);" placeholder="Password">
     <div class="break"></div>
 
-    <div class="wrapper">
-        <input type="checkbox" id="check">
-    </div>
-
     <div class="break"></div>
-    <div class="btn-sign-up"></div>
+    <a class="" href="index.php" target="_self">
+        <div class="btn-sign-up"></div>
+    </a>
+
     </div>
 
     <input type="text" name="test" id="test" onkeypress="check(this.value);">
@@ -65,11 +64,11 @@
     </script>
 
     <script>
-        function checkEmail(id)
+        function check(id)
         {
             document.getElementById("result").innerHTML = document.getElementById("email").value.length;
 
-            if (document.getElementById("email").value.length > 2) {
+            if (document.getElementById("email").value.length > 0 && document.getElementById("login").value.length > 0 && document.getElementById("password").value.length > 0) {
                 document.getElementById("email").style.color = 'red';
             }
             else {
@@ -77,11 +76,30 @@
             }
         }
 
+        jQuery.ajax({
+            type: "POST",
+            url: 'registration.php',
+            dataType: 'json',
+            data: {functionname: 'checkMailExistence', arguments: [""]},
+
+            success: function (obj, textstatus) {
+                if( !('error' in obj) ) {
+                    yourVariable = obj.result;
+                }
+                else {
+                    console.log(obj.error);
+                }
+            }
+        });
+
+
         $(document).ready(function() {
             $("#check").keypress(function(){
                 alert($(this).val());
             });
         });
+
+
     </script>
 
 
@@ -93,6 +111,14 @@
 
 
 <?php
+
+$validMail = false;
+
+function checkMailExistence($address)
+{
+    echo "called";
+    return filter_var($address, FILTER_VALIDATE_EMAIL);
+}
 
 if (isset($_GET['test']))
 {

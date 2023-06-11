@@ -74,18 +74,7 @@
                 <div class="box-number-part"></div>
                 <div class="box-number-part"></div>
 
-                <div class="box-range-big"></div>
-                <div class="box-range-big"></div>
-                <div class="box-range-big"></div>
-
-                <div class="box-range-small"></div>
-                <div class="box-range-small"></div>
-                <div class="box-range-small"></div>
-                <div class="box-range-small"></div>
-                <div class="box-range-small"></div>
-                <div class="box-range-small"></div>
             </div>
-        <div class="box-zero"></div>
     </div>
     </div>
 

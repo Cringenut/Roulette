@@ -44,3 +44,6 @@
 
 
 <?php
+
+$validUsername = false;
+$validPassword = false;
