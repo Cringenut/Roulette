@@ -1,3 +1,16 @@
+
+<?php
+var_dump(($_POST));
+var_dump($_GET['email']);
+var_dump($_POST['email']);
+
+function checkMailExistence($address)
+{
+    echo "called";
+    return filter_var($address, FILTER_VALIDATE_EMAIL);
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -35,31 +48,26 @@
         <div class="box-registration-text">
             <div class="text-registration"</div>REGISTRATION</div>
     </div>
-    <input type="text" name="email" id="email" onkeyup="check(this.value);" placeholder="E-mail">
-    <div class="break"></div>
-    <input type="text" name="login" id="login" onkeyup="check(this.value);" placeholder="Login">
-    <div class="break"></div>
-    <input type="text" name="password" id="password" onkeyup="check(this.value);" placeholder="Password">
-    <div class="break"></div>
 
-    <div class="break"></div>
     <form action = "" method = "post">
+        <input type="text" name="email" id="email   " onkeyup="check(this.value);" placeholder="E-mail">
+    <div class="break"></div>
+        <input type="text" name="login" id="login" onkeyup="check(this.value);" placeholder="Login">
+    <div class="break"></div>
+        <input type="text" name="password" id="password" onkeyup="check(this.value);" placeholder="Password">
 
+    <div class="break"></div>
+    <div class="break"></div>
+
+
+        <button name="signup" id="signup" type="submit" class="btn-sign-up"></button>
     </form>
-    <a class="" href="" name="signin" id="signin" target="_self">
-        <div class="btn-sign-up"></div>
-    </a>
 
-    </div>
 
-    <input type="text" name="test" id="test" onkeypress="check(this.value);">
-    Your value: <span id="result"> </span>
-</head>
 
 
     <body>
 
-    <
 
     <script type="text/javascript">
         window.addEventListener('keydown',function(e) {
@@ -78,14 +86,15 @@
         {
             document.getElementById("result").innerHTML = document.getElementById("email").value.length;
 
-            if (document.getElementById("email").value.length > 0 && document.getElementById("login").value.length > 0 && document.getElementById("password").value.length > 0) {
+            if (document.getElementById("email").value.length > 0) {
                 document.getElementById("email").style.color = 'red';
-                document.getElementById("signin").style.pointerEvents = "visible";
+                document.querySelector('#signup').disabled = false;
+                document.getElementById("signup").style.pointerEvents = "visible";
             }
             else {
                 document.getElementById("email").style.color = 'black';
-                document.querySelector('#signin').disabled = true;
-                document.getElementById("signin").style.pointerEvents = "none";
+                document.querySelector('#signup').disabled = true;
+                document.getElementById("signup").style.pointerEvents = "none";
             }
         }
 
@@ -98,26 +107,5 @@
 
 
 
-
-<?php
-
-$validMail = false;
-
-function checkMailExistence($address)
-{
-    echo "called";
-    return filter_var($address, FILTER_VALIDATE_EMAIL);
-}
-
-if (isset($_POST['email']) && isset($_POST['login']) && isset($_POST['password']))
-{
-    echo $_POST['email'];
-    echo $_POST['login'];
-    echo $_POST['password'];
-}
-else
-{
-    echo "non-set";
-}
 
 
