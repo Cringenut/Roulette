@@ -183,8 +183,8 @@ input[type=text], input[type=password] {
 .btn-sign-up {
     background-color: #1f1f68;
     border-radius:1.5em;
-
-    display: inline-block;
+    vertical-align: middle;
+    cursor:pointer;
 
     height: 6vh;
     width: 20vh;
@@ -208,7 +208,7 @@ input[type=text], input[type=password] {
 
     left: 50%;
 
-    transform: translate(-50%, 10%);
+    transform: translate(-50%, -50%);
 }
 
 input[type="checkbox"] {
