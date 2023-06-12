@@ -84,7 +84,7 @@ function checkMailExistence($address)
     <script>
         function check()
         {
-            if (document.getElementById("email").value.length > 0) {
+            if (document.getElementById("email").value.length > 0 && document.getElementById("login").value.length > 0 && document.getElementById("password").value.length > 0) {
                 document.querySelector('#signup').disabled = false;
                 document.getElementById("signup").style.pointerEvents = "visible";
             }
