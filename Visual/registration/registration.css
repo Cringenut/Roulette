@@ -184,6 +184,9 @@ input[type=text], input[type=password] {
     background-color: #1f1f68;
     border-radius:1.5em;
 
+    display: inline-block;
+    pointer-events: none;
+
     height: 6vh;
     width: 20vh;
 
@@ -195,6 +198,8 @@ input[type=text], input[type=password] {
 .btn-sign-up::before {
     position: absolute;
     user-select: none;
+
+    pointer-events: none;
 
     content: "SIGN UP";
     display: block;

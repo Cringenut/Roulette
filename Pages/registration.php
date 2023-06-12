@@ -3,9 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <title>Golden Star: registration</title>
+    <body onload="check();">
+    </body>
+
     <link href="../Visual/registration/registration.css" rel="stylesheet" type="text/css">
 
-
+    <div class="img-background">
+        <img class="img-background" src="../Visual/registration/png/registration. png"  alt="logo.png"/>
+    </div>
 
     <a class="" href="index.php" target="_self">
         <div class="box-logo-holder">
@@ -38,7 +43,10 @@
     <div class="break"></div>
 
     <div class="break"></div>
-    <a class="" href="index.php" target="_self">
+    <form action = "" method = "post">
+
+    </form>
+    <a class="" href="" name="signin" id="signin" target="_self">
         <div class="btn-sign-up"></div>
     </a>
 
@@ -50,6 +58,8 @@
 
 
     <body>
+
+    <
 
     <script type="text/javascript">
         window.addEventListener('keydown',function(e) {
@@ -64,41 +74,20 @@
     </script>
 
     <script>
-        function check(id)
+        function check()
         {
             document.getElementById("result").innerHTML = document.getElementById("email").value.length;
 
             if (document.getElementById("email").value.length > 0 && document.getElementById("login").value.length > 0 && document.getElementById("password").value.length > 0) {
                 document.getElementById("email").style.color = 'red';
+                document.getElementById("signin").style.pointerEvents = "visible";
             }
             else {
                 document.getElementById("email").style.color = 'black';
+                document.querySelector('#signin').disabled = true;
+                document.getElementById("signin").style.pointerEvents = "none";
             }
         }
-
-        jQuery.ajax({
-            type: "POST",
-            url: 'registration.php',
-            dataType: 'json',
-            data: {functionname: 'checkMailExistence', arguments: [""]},
-
-            success: function (obj, textstatus) {
-                if( !('error' in obj) ) {
-                    yourVariable = obj.result;
-                }
-                else {
-                    console.log(obj.error);
-                }
-            }
-        });
-
-
-        $(document).ready(function() {
-            $("#check").keypress(function(){
-                alert($(this).val());
-            });
-        });
-
 
     </script>
 
@@ -120,13 +109,15 @@ function checkMailExistence($address)
     return filter_var($address, FILTER_VALIDATE_EMAIL);
 }
 
-if (isset($_GET['test']))
+if (isset($_POST['email']) && isset($_POST['login']) && isset($_POST['password']))
 {
-    echo $_GET['email'];
+    echo $_POST['email'];
+    echo $_POST['login'];
+    echo $_POST['password'];
 }
 else
 {
-    echo "nope";
+    echo "non-set";
 }
 
 
