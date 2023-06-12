@@ -52,7 +52,7 @@ function checkMailExistence($address)
 </div>
 
 
-    <input type="text" name="email" id="email   " onkeyup="check(this.value);" placeholder="E-mail">
+    <input type="text" name="email" id="email" onkeyup="check(this.value);" placeholder="E-mail">
     <div class="break"></div>
     <input type="text" name="login" id="login" onkeyup="check(this.value);" placeholder="Login">
     <div class="break"></div>
@@ -84,15 +84,11 @@ function checkMailExistence($address)
     <script>
         function check()
         {
-            document.getElementById("result").innerHTML = document.getElementById("email").value.length;
-
             if (document.getElementById("email").value.length > 0) {
-                document.getElementById("email").style.color = 'red';
                 document.querySelector('#signup').disabled = false;
                 document.getElementById("signup").style.pointerEvents = "visible";
             }
             else {
-                document.getElementById("email").style.color = 'black';
                 document.querySelector('#signup').disabled = true;
                 document.getElementById("signup").style.pointerEvents = "none";
             }
