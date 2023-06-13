@@ -9,7 +9,7 @@ if (isset($_POST['username']) && isset($_POST['password']))
     var_dump($_POST['password']);
     if (checkData())
     {
-        var_dump(checkLoginUsernameAndPassword($_POST['username'], $_POST['password']));
+        checkLoginUsernameAndPassword($_POST['username'], $_POST['password']);
         if ($_SESSION['logged'])
         {
             header("Location: index.php");

@@ -12,23 +12,24 @@ if (!isset($_SESSION['login']))
 
 if (!isset($_SESSION['password']))
 {
-    $_SESSION['password'] = null;
+    $_SESSION['balance'] = null;
 }
 
 function checkLoginUsernameAndPassword($username, $password)
 {
     $conn = mysqli_connect('localhost', 'root', '', 'test_db');
 
-    $sql = 'SELECT password FROM users WHERE username = "log1"';
+    $sql = 'SELECT password FROM users WHERE username = '."\"$username\"";
+    var_dump($sql);
     $result = mysqli_query($conn, $sql);
 
     $sqlPassword = mysqli_fetch_all($result);
-
     $sqlPassword = implode($sqlPassword[0]);
 
     if ($sqlPassword == $password)
     {
         $_SESSION['logged'] = true;
+
     }
 }
 function getBalance($username)

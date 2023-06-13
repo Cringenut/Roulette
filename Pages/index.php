@@ -16,8 +16,12 @@
                     <img class="img-logo" src="../Visual/index/png/logo.png"  alt="logo.png"/>
                 </div>
 
-            <a class="box-login" href="login.php" target="_self"></a>
-            <a class="btn-sign-up" href="registration.php" target="_self"></a>
+            <?php require "test.php"; if (!$_SESSION['logged'])
+                { ?>
+                    <a class="box-login" href="login.php" target="_self"></a>
+                    <a class="btn-sign-up" href="registration.php" target="_self"></a>
+                <?php } ?>
+
                     <div class="line"></div>
         </div>
 
