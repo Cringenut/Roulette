@@ -41,48 +41,23 @@ if (isset($_SESSION['logged']) == null)
         <div class="flex-container-bidding">
             <div class="box-zero"></div>
             <div class="flex-container-numbers">
-                <div class="box-number-red"></div>
-                <div class="box-number-green"></div>
-                <div class="box-number-red"></div>
-                <div class="box-number-green"></div>
-                <div class="box-number-red"></div>
-                <div class="box-number-green"></div>
-                <div class="box-number-red"></div>
-                <div class="box-number-green"></div>
-                <div class="box-number-red"></div>
-                <div class="box-number-green"></div>
-                <div class="box-number-red"></div>
-                <div class="box-number-green"></div>
 
-                <div class="box-number-green"></div>
-                <div class="box-number-red"></div>
-                <div class="box-number-green"></div>
-                <div class="box-number-red"></div>
-                <div class="box-number-green"></div>
-                <div class="box-number-red"></div>
-                <div class="box-number-green"></div>
-                <div class="box-number-red"></div>
-                <div class="box-number-green"></div>
-                <div class="box-number-red"></div>
-                <div class="box-number-green"></div>
-                <div class="box-number-red"></div>
-
-                <div class="box-number-red"></div>
-                <div class="box-number-green"></div>
-                <div class="box-number-red"></div>
-                <div class="box-number-green"></div>
-                <div class="box-number-red"></div>
-                <div class="box-number-green"></div>
-                <div class="box-number-red"></div>
-                <div class="box-number-green"></div>
-                <div class="box-number-red"></div>
-                <div class="box-number-green"></div>
-                <div class="box-number-red"></div>
-                <div class="box-number-green"></div>
-
-                <div class="box-number-part"></div>
-                <div class="box-number-part"></div>
-                <div class="box-number-part"></div>
+                <?php $red = array(0, 2, 3, 5, 6, 8, 9, 11, 13, 16, 19, 22, 24, 26, 29, 30, 32, 35);
+                for ($i = 0; $i < 36; $i++) { ?>
+                    <?php if (in_array($i, $red)) { ?>
+                        <div class="box-number">
+                            <div class="oval-number-red">
+                                <div class="text-number"><?php echo setNumber($i)?></div>
+                            </div>
+                        </div>
+                    <?php } else { ?>
+                        <div class="box-number">
+                            <div class="oval-number-black">
+                                <div class="text-number"><?php echo setNumber($i)?></div>
+                            </div>
+                        </div>
+                    <?php } ?>
+                <?php } ?>
 
             </div>
     </div>
@@ -96,3 +71,19 @@ if (isset($_SESSION['logged']) == null)
 
 
 <?php
+
+function setNumber($i)
+{
+    if (floor($i/12) == 0)
+    {
+        return 3;
+    }
+    else if (floor($i/12) == 1)
+    {
+        return 0;
+    }
+    else
+    {
+        return 0;
+    }
+}
