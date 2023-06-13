@@ -40,3 +40,6 @@
 
 
 <?php
+
+require "menu.php";
+

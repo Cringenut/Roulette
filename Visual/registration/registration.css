@@ -153,7 +153,7 @@ body {
     height: 4vh;
 
     left: 50%;
-    top: 20%;
+    top: 18.5%;
 
 
     transform: translate(-50%, 0%);
@@ -191,10 +191,10 @@ input[type=text], input[type=password] {
 
     border-style: solid;
     border-width: 0.4vh;
-    color: #1f1f68;
+    border-color: #1f1f68;
 }
 
-.btn-sign-up::before {
+.text-btn-sign-up {
     position: absolute;
     user-select: none;
 
@@ -209,15 +209,4 @@ input[type=text], input[type=password] {
     left: 50%;
 
     transform: translate(-50%, -50%);
-}
-
-input[type="checkbox"] {
-    width: 2vh;
-    height: 2vh;
-
-    background-color: red;
-}
-
-.container input:checked ~ .checkmark {
-    background-color: red;
 }

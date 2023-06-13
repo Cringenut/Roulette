@@ -103,7 +103,7 @@ body {
 .text-sign-in {
     position: absolute;
     user-select: none;
-    content: "SIGN UP";
+    content: "SIGN IN";
     display: block;
     text-align: center;
     font-family: Bebas, serif;
@@ -153,7 +153,7 @@ body {
     height: 4vh;
 
     left: 50%;
-    top: 20%;
+    top: 18.5%;
 
 
     transform: translate(-50%, 0%);
@@ -183,16 +183,18 @@ input[type=text], input[type=password] {
 .btn-sign-in {
     background-color: #1f1f68;
     border-radius:1.5em;
+    vertical-align: middle;
+    cursor:pointer;
 
     height: 6vh;
     width: 20vh;
 
     border-style: solid;
     border-width: 0.4vh;
-    color: #1f1f68;
+    border-color: #1f1f68;
 }
 
-.btn-sign-in::before {
+.text-btn-sign-in {
     position: absolute;
     user-select: none;
 
@@ -206,5 +208,5 @@ input[type=text], input[type=password] {
 
     left: 50%;
 
-    transform: translate(-50%, 10%);
+    transform: translate(-50%, -50%);
 }

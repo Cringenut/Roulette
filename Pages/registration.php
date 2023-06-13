@@ -1,18 +1,20 @@
 <?php
 
-
 if (isset($_POST['email']) && isset($_POST['login']) && isset($_POST['password']))
 {
     if (checkData())
     {
-        header("Location: index.php");
+        login();
+        if ($_SESSION['login'])
+        {
+            header("Location: index.php");
+        }
     }
 }
 function checkData()
 {
     return filter_var($_POST['email'], FILTER_VALIDATE_EMAIL) && preg_match('/^[A-Za-z0-9]*$/', $_POST['login']) && preg_match('/^[A-Za-z0-9]*$/', $_POST['password']);
 }
-
 
 ?>
 
@@ -67,7 +69,9 @@ function checkData()
     <div class="break"></div>
 
 
-    <button name="signup" id="signup" type="submit" class="btn-sign-up"></button>
+    <button name="signup" id="signup" type="submit" class="btn-sign-up">
+        <div class="text-btn-sign-up" id="textsignup" </div>SIGN UP</div>
+    </button>
 
 </form>
 
@@ -91,17 +95,18 @@ function checkData()
         {
             if (document.getElementById("email").value.length > 0 && document.getElementById("login").value.length > 0 && document.getElementById("password").value.length > 0) {
                 document.getElementById("signup").style.pointerEvents = "visible";
+                document.getElementById("signup").style.borderColor = "#ffcc00";
+                document.getElementById("textsignup").style.color = "#ffcc00";
             }
             else {
                 document.getElementById("signup").style.pointerEvents = "none";
+                document.getElementById("textsignup").style.color = "#140e4a";
+                document.getElementById("signup").style.borderColor = "#1f1f68";
             }
         }
 
     </script>
-
-
     </body>
-
 </html>
 
 

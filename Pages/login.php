@@ -1,19 +1,48 @@
+<?php
+
+include "menu.php";
+
+var_dump($_SESSION['login']);
+
+if (isset($_POST['login']) && isset($_POST['password']))
+{
+    if (checkData())
+    {
+        login();
+        if ($_SESSION['login'])
+        {
+            header("Location: index.php");
+        }
+    }
+}
+function checkData()
+{
+    return preg_match('/^[A-Za-z0-9]*$/', $_POST['login']) && preg_match('/^[A-Za-z0-9]*$/', $_POST['password']);
+}
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <title>Golden Star: login</title>
-    <link href="../Visual/login/login.css" rel="stylesheet" type="text/css">
+<body onload="check();">
+</body>
 
-    <div class="img-background">
-        <img class="img-background" src="../Visual/login/png/login.png"  alt="logo.png"/>
+<link href="../Visual/login/login.css" rel="stylesheet" type="text/css">
+
+<div class="img-background">
+    <img class="img-background" src="../Visual/login/png/login.png"  alt="logo.png"/>
+</div>
+
+<a class="" href="index.php" target="_self">
+    <div class="box-logo-holder">
+        <img class="img-logo-big" src="../Visual/index/png/logo.png"  alt="logo.png"/>
     </div>
+</a>
 
-    <a class="" href="index.php" target="_self">
-        <div class="box-logo-holder">
-            <img class="img-logo-big" src="../Visual/index/png/logo.png"  alt="logo.png"/>
-        </div>
-    </a>
+<form action = "" method = "post">
 
     <div class="box-login-holder">
         <div class="break"></div>
@@ -32,15 +61,53 @@
         <div class="box-registration-text">
             <div class="text-login"</div>LOGIN</div>
     </div>
-    <input type="text" placeholder="Login">
+    <input type="text" name="login" id="login" onkeyup="check(this.value);" placeholder="Login">
     <div class="break"></div>
-    <input type="password" placeholder="Password">
-    <div class="break"></div>
-    <div class="break"></div>
-    <div class="btn-sign-in"></div>
-    </div>
+    <input type="text" name="password" id="password" onkeyup="check(this.value);" placeholder="Password">
 
-</head>
+    <div class="break"></div>
+    <div class="break"></div>
+
+
+    <button name="signin" id="signin" type="submit" class="btn-sign-in">
+        <div class="text-btn-sign-in" id="textsignin" </div>SIGN IN</div>
+    </button>
+
+</form>
+
+<body>
+
+
+<script type="text/javascript">
+    window.addEventListener('keydown',function(e) {
+        if (e.keyIdentifier=='U+000A' || e.keyIdentifier=='Enter' || e.keyCode==13) {
+            if (e.target.nodeName=='INPUT' && e.target.type=='text') {
+                e.preventDefault();
+
+                return false;
+            }
+        }
+    }, true);
+</script>
+
+<script>
+    function check()
+    {
+        if (document.getElementById("login").value.length > 0 && document.getElementById("password").value.length > 0) {
+            document.getElementById("signin").style.pointerEvents = "visible";
+            document.getElementById("signin").style.borderColor = "#ffcc00";
+            document.getElementById("textsignin").style.color = "#ffcc00";
+        }
+        else {
+            document.getElementById("signin").style.pointerEvents = "none";
+            document.getElementById("textsignin").style.color = "#140e4a";
+            document.getElementById("signin").style.borderColor = "#1f1f68";
+        }
+    }
+
+</script>
+</body>
+</html>
 
 
 <?php
