@@ -1,8 +1,36 @@
 <?php
 
+if (!isset($_SESSION['logged']))
+{
+    $_SESSION['logged'] = null;
+}
 
-$conn = mysqli_connect('localhost', 'root', '', 'test_db');
+if (!isset($_SESSION['login']))
+{
+    $_SESSION['username'] = null;
+}
 
+if (!isset($_SESSION['password']))
+{
+    $_SESSION['password'] = null;
+}
+
+function checkLoginUsernameAndPassword($username, $password)
+{
+    $conn = mysqli_connect('localhost', 'root', '', 'test_db');
+
+    $sql = 'SELECT password FROM users WHERE username = "log1"';
+    $result = mysqli_query($conn, $sql);
+
+    $sqlPassword = mysqli_fetch_all($result);
+
+    $sqlPassword = implode($sqlPassword[0]);
+
+    if ($sqlPassword == $password)
+    {
+        $_SESSION['logged'] = true;
+    }
+}
 function getBalance($username)
 {
     if (isset($conn))

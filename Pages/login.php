@@ -1,15 +1,16 @@
 <?php
 
-include "menu.php";
+include "test.php";
 
-var_dump($_SESSION['login']);
+var_dump($_POST['username']);
 
-if (isset($_POST['login']) && isset($_POST['password']))
+if (isset($_POST['username']) && isset($_POST['password']))
 {
+    var_dump($_POST['password']);
     if (checkData())
     {
-        login();
-        if ($_SESSION['login'])
+        var_dump(checkLoginUsernameAndPassword($_POST['username'], $_POST['password']));
+        if ($_SESSION['logged'])
         {
             header("Location: index.php");
         }
@@ -17,7 +18,7 @@ if (isset($_POST['login']) && isset($_POST['password']))
 }
 function checkData()
 {
-    return preg_match('/^[A-Za-z0-9]*$/', $_POST['login']) && preg_match('/^[A-Za-z0-9]*$/', $_POST['password']);
+    return preg_match('/^[A-Za-z0-9]*$/', $_POST['username']) && preg_match('/^[A-Za-z0-9]*$/', $_POST['password']);
 }
 
 ?>
@@ -33,7 +34,7 @@ function checkData()
 <link href="../Visual/login/login.css" rel="stylesheet" type="text/css">
 
 <div class="img-background">
-    <img class="img-background" src="../Visual/login/png/login.png"  alt="logo.png"/>
+    <img class="img-background" src="../Visual/login/png/login. png"  alt="logo.png"/>
 </div>
 
 <a class="" href="index.php" target="_self">
@@ -61,9 +62,9 @@ function checkData()
         <div class="box-registration-text">
             <div class="text-login"</div>LOGIN</div>
     </div>
-    <input type="text" name="login" id="login" onkeyup="check(this.value);" placeholder="Login">
+    <input type="text" name="username" id="username" onkeyup="check(this.value);" placeholder="Login">
     <div class="break"></div>
-    <input type="text" name="password" id="password" onkeyup="check(this.value);" placeholder="Password">
+    <input type="password" name="password" id="password" onkeyup="check(this.value);" placeholder="Password">
 
     <div class="break"></div>
     <div class="break"></div>
@@ -93,7 +94,7 @@ function checkData()
 <script>
     function check()
     {
-        if (document.getElementById("login").value.length > 0 && document.getElementById("password").value.length > 0) {
+        if (document.getElementById("username").value.length > 0 && document.getElementById("password").value.length > 0) {
             document.getElementById("signin").style.pointerEvents = "visible";
             document.getElementById("signin").style.borderColor = "#ffcc00";
             document.getElementById("textsignin").style.color = "#ffcc00";
