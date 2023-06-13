@@ -1,3 +1,7 @@
+<?php
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -16,21 +20,30 @@
                     <img class="img-logo" src="../Visual/index/png/logo.png"  alt="logo.png"/>
                 </div>
 
-            <?php require "test.php"; if (!$_SESSION['logged'])
-                { ?>
-                    <a class="box-login" href="login.php" target="_self"></a>
-                    <a class="btn-sign-up" href="registration.php" target="_self"></a>
-                <?php } ?>
+
+                    <?php if(false) : ?>
+                        <a class="box-login" href="login.php" target="_self"></a>
+                        <a class="btn-sign-up" href="registration.php" target="_self"></a>
+                    <?php else : ?>
+                        <a class="" href="" target="_self"></a>
+                        <div class="box-user-holder">
+                            <form action="https://google.com">
+                            <div class="text-username">Tssawdwwadx</div>
+                            <div class="text-balance">Tssawdwwadx</div>
+                            </form>
+                        </div>
+                    <?php endif; ?>
+
 
                     <div class="line"></div>
         </div>
 
 
         <div class="box-holder">
-            <img class="box-image" src="../Visual/index/png/main.png"  alt="Desc"/>
+            <img class="box-image" src="../Visual/index/png/mai n.png"  alt="Desc"/>
                 <a class="box-image" href="bidding.php" target="_self"></a>
             <div class="img-roulette">
-                <img class="img-roulette" src="../Visual/index/png/roulette.png"  alt="logo.png"/>
+                <img class="img-roulette" src="../Visual/index/png/roulett e.png"  alt="logo.png"/>
             </div>
 
             <p class="text-bottom-desc">a timeless casino game offers an exhilarating experience for players seeking the thrill of chance</p>
@@ -43,7 +56,6 @@
 </html>
 
 
-<?php
 
-require "menu.php";
+
 

@@ -5,7 +5,7 @@ if (!isset($_SESSION['logged']))
     $_SESSION['logged'] = null;
 }
 
-if (!isset($_SESSION['login']))
+if (!isset($_SESSION['username']))
 {
     $_SESSION['username'] = null;
 }
@@ -20,16 +20,22 @@ function checkLoginUsernameAndPassword($username, $password)
     $conn = mysqli_connect('localhost', 'root', '', 'test_db');
 
     $sql = 'SELECT password FROM users WHERE username = '."\"$username\"";
-    var_dump($sql);
     $result = mysqli_query($conn, $sql);
 
     $sqlPassword = mysqli_fetch_all($result);
     $sqlPassword = implode($sqlPassword[0]);
 
-    if ($sqlPassword == $password)
+    if ($sqlPassword === $password)
     {
+        session_start();
         $_SESSION['logged'] = true;
-
+        $_SESSION['username'] = $username;
+    }
+    else
+    {
+        session_abort();
+        $_SESSION['logged'] = null;
+        $_SESSION['username'] = null;
     }
 }
 function getBalance($username)
@@ -38,7 +44,7 @@ function getBalance($username)
     {
         echo "connected";
 
-        $sql = 'SELECT balance FROM users WHERE username = ' + $username;
+        $sql = 'SELECT balance FROM users WHERE username = '."\"$username\"";
         $result = mysqli_query($conn, $sql);
 
         return mysqli_fetch_assoc($result);

@@ -2,17 +2,18 @@
 
 include "test.php";
 
-var_dump($_POST['username']);
 
 if (isset($_POST['username']) && isset($_POST['password']))
 {
-    var_dump($_POST['password']);
     if (checkData())
     {
-        checkLoginUsernameAndPassword($_POST['username'], $_POST['password']);
-        if ($_SESSION['logged'])
+        if (!isset($_SESSION['logged']))
         {
-            header("Location: index.php");
+            checkLoginUsernameAndPassword($_POST['username'], $_POST['password']);
+            if (isset($_SESSION['logged']))
+            {
+                header("Location: session.php");
+            }
         }
     }
 }

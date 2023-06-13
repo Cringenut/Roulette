@@ -18,7 +18,7 @@ body {
 .box-menu {
     position:relative;
     height: 10vh;
-    background-color: #0f0b2d;
+    //background-color: #0f0b2d;
 }
 
 .btn-logo {
@@ -127,4 +127,59 @@ body {
     margin-top: 10vh;
 
     transform: translate(0, -100%);
+}
+
+.box-user-holder {
+    position: absolute;
+    display: flex;
+    background-color: red;
+
+    height: 5vh;
+    width: 16vh;
+
+    margin-right: 6vh;
+    right: 0;
+    top: 50%;
+
+    transform: translate(0%, -50%);
+}
+
+.text-username {
+    position: absolute;
+    text-align: right;
+
+    content: "SIGN UP";
+    display: block;
+    font-family: "Helvetica", serif;
+    color: #ffcc00;
+    font-size: 2.8vh;
+
+    width: auto;
+    bottom: 43%;
+
+    left: 16vh;
+
+    transform: translate(-100%, 25%);
+}
+
+.text-balance {
+    position: absolute;
+    text-align: right;
+
+    content: "SIGN UP";
+    display: block;
+    font-family: "Helvetica", serif;
+    color: #ffcc00;
+    font-size: 1.8vh;
+
+    width: auto;
+    bottom: 43%;
+
+    left: 16vh;
+
+    transform: translate(-100%, 105%);
+}
+
+.btn-logout {
+
 }
