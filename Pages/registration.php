@@ -1,14 +1,19 @@
-
 <?php
-var_dump(($_POST));
-var_dump($_GET['email']);
-var_dump($_POST['email']);
 
-function checkMailExistence($address)
+
+if (isset($_POST['email']) && isset($_POST['login']) && isset($_POST['password']))
 {
-    echo "called";
-    return filter_var($address, FILTER_VALIDATE_EMAIL);
+    if (checkData())
+    {
+        header("Location: index.php");
+    }
 }
+function checkData()
+{
+    return filter_var($_POST['email'], FILTER_VALIDATE_EMAIL) && preg_match('/^[A-Za-z0-9]*$/', $_POST['login']) && preg_match('/^[A-Za-z0-9]*$/', $_POST['password']);
+}
+
+
 ?>
 
 <!DOCTYPE html>
@@ -22,7 +27,7 @@ function checkMailExistence($address)
 <link href="../Visual/registration/registration.css" rel="stylesheet" type="text/css">
 
 <div class="img-background">
-    <img class="img-background" src="../Visual/registration/png/registration. png"  alt="logo.png"/>
+    <img class="img-background" src="../Visual/registration/png/registration.png"  alt="logo.png"/>
 </div>
 
 <a class="" href="index.php" target="_self">
@@ -85,11 +90,9 @@ function checkMailExistence($address)
         function check()
         {
             if (document.getElementById("email").value.length > 0 && document.getElementById("login").value.length > 0 && document.getElementById("password").value.length > 0) {
-                document.querySelector('#signup').disabled = false;
                 document.getElementById("signup").style.pointerEvents = "visible";
             }
             else {
-                document.querySelector('#signup').disabled = true;
                 document.getElementById("signup").style.pointerEvents = "none";
             }
         }
