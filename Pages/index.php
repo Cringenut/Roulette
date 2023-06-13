@@ -1,5 +1,4 @@
 <?php
-
 ?>
 
 <!DOCTYPE html>
@@ -12,6 +11,11 @@
         <link href="./../Visual/index/main.css" rel="stylesheet" type="text/css">
     </head>
 
+    <style>
+        div.both:hover .text-username { color: white }
+        div.both:hover .text-balance { color: white }
+    </style>
+
     <body>
         <div class="box-menu">
             <div class="btn-logo"></div>
@@ -21,16 +25,26 @@
                 </div>
 
 
-                    <?php if(false) : ?>
+                    <?php session_start();  if(isset($_SESSION['logged']) == null) : ?>
                         <a class="box-login" href="login.php" target="_self"></a>
                         <a class="btn-sign-up" href="registration.php" target="_self"></a>
                     <?php else : ?>
                         <a class="" href="" target="_self"></a>
                         <div class="box-user-holder">
-                            <form action="https://google.com">
-                            <div class="text-username">Tssawdwwadx</div>
-                            <div class="text-balance">Tssawdwwadx</div>
-                            </form>
+
+                            <a href="account.php">
+                                <div class="both">
+                                    <div class="text-username" id="account"><?php echo $_SESSION['username']?></div>
+                                    <div class="text-balance" id="account"><?php require "test.php";
+                                    echo number_format(floatval(getBalance($_SESSION['username'])), 2, '.');
+                                    echo "$"?>
+                                    </div>
+                                </div>
+                                    <a href="logout.php">
+                                        <div class="btn-log-out" id="account"></div>
+                                    </a>
+
+                            </a>
                         </div>
                     <?php endif; ?>
 
@@ -40,10 +54,10 @@
 
 
         <div class="box-holder">
-            <img class="box-image" src="../Visual/index/png/mai n.png"  alt="Desc"/>
+            <img class="box-image" src="../Visual/index/png/main.png"  alt="Desc"/>
                 <a class="box-image" href="bidding.php" target="_self"></a>
             <div class="img-roulette">
-                <img class="img-roulette" src="../Visual/index/png/roulett e.png"  alt="logo.png"/>
+                <img class="img-roulette" src="../Visual/index/png/roulette.png"  alt="logo.png"/>
             </div>
 
             <p class="text-bottom-desc">a timeless casino game offers an exhilarating experience for players seeking the thrill of chance</p>

@@ -1,6 +1,11 @@
 <?php
 
-include "test.php";
+require "test.php";
+
+session_start();
+if (isset($_SESSION['logged'])) {
+    header("Location: index.php");
+}
 
 
 if (isset($_POST['username']) && isset($_POST['password']))
@@ -12,7 +17,7 @@ if (isset($_POST['username']) && isset($_POST['password']))
             checkLoginUsernameAndPassword($_POST['username'], $_POST['password']);
             if (isset($_SESSION['logged']))
             {
-                header("Location: session.php");
+                header("Location: index.php");
             }
         }
     }

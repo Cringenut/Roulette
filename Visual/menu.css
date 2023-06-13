@@ -18,7 +18,7 @@ body {
 .box-menu {
     position:relative;
     height: 10vh;
-    //background-color: #0f0b2d;
+    background-color: #0f0b2d;
 }
 
 .btn-logo {
@@ -132,7 +132,6 @@ body {
 .box-user-holder {
     position: absolute;
     display: flex;
-    background-color: red;
 
     height: 5vh;
     width: 16vh;
@@ -150,17 +149,19 @@ body {
 
     content: "SIGN UP";
     display: block;
-    font-family: "Helvetica", serif;
+    font-family: "Arial", serif;
     color: #ffcc00;
-    font-size: 2.8vh;
+    font-size: 3.4vh;
 
     width: auto;
     bottom: 43%;
 
     left: 16vh;
 
-    transform: translate(-100%, 25%);
+    transform: translate(-100%, 10%);
 }
+
+
 
 .text-balance {
     position: absolute;
@@ -170,16 +171,31 @@ body {
     display: block;
     font-family: "Helvetica", serif;
     color: #ffcc00;
-    font-size: 1.8vh;
+    font-size: 1.9vh;
 
     width: auto;
     bottom: 43%;
 
-    left: 16vh;
+    left: 14vh;
 
     transform: translate(-100%, 105%);
 }
 
-.btn-logout {
+.btn-log-out {
+    position: absolute;
 
+    background-size:100% 100%;
+    background-image: url("../Visual/index/png/logout-default.png");
+    width: 1.8vh;
+    height: 1.8vh;
+
+    bottom: 43%;
+
+    left: 16vh;
+
+    transform: translate(-100%, 120%);
+}
+
+.btn-log-out:hover {
+    background-image: url("../Visual/index/png/logout-hover.png");
 }
