@@ -71,7 +71,7 @@ isLogged();
 </html>
 
     <script>
-        $(".box-zero").hover(function(){
+        $(".box-number").hover(function(){
             $(this).css("background-color", "red");
         }, function(){
             $(this).css("background-color", "yellow");
