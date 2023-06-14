@@ -29,6 +29,14 @@ body {
     height: calc(1.2*384px);
 }
 
+.box-number-parent {
+    background-color: pink;
+    outline: red solid 4px;
+
+    width: calc(1.2*85px);
+    height: calc(1.2*128px);
+}
+
 .box-number {
     background-color: green;
     outline: red solid 4px;
@@ -38,7 +46,7 @@ body {
 }
 
 .box-number:hover {
-    background-color: black;
+    background-color: yellowgreen;
 }
 
 .oval-number-red, .oval-number-black {
@@ -48,16 +56,18 @@ body {
     border-radius: 50%;
 
     left: 50%;
-    top: 50%;
+    top: -50%;
 
     transform:  translate(-50%, -50%) rotate(-90deg);
 }
 
 .oval-number-red {
+    pointer-events: none;
     background-color: red;
 }
 
 .oval-number-black {
+    pointer-events: none;
     background-color: black;
 }
 
@@ -75,7 +85,6 @@ body {
 
     left: 50%;
     top: 50%;
-
 
     transform: translate(-50%, -50%);
 }
@@ -102,9 +111,29 @@ body {
     background-color: fore stgreen;
 }
 
-input[type=amount] {
-    background-color: white;
+
+.element-reset {
+    position: absolute;
+
+    background-size:100% 100%;
+    background-color: blue;
+    width: 1.8vh;
+    height: 1.8vh;
+
+    top: 5.8vh;
+    left: 10.5vh;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;}
+
+input[type=number] {
+
+    position: relative;
     border-radius:2.5em;
+    text-align: center;
 
     display: block;
     font-family: "Helvetica", serif;
@@ -115,4 +144,8 @@ input[type=amount] {
     height: 6vh;
     width: 42vh;
 
+    left: 50%;
+    top: 16vh;
+
+    transform: translate(-50%, -50%);
 }

@@ -4,7 +4,6 @@ require "test.php";
 
 isNotLogged();
 
-
 if (isset($_POST['username']) && isset($_POST['password']))
 {
     if (checkData())
@@ -108,7 +107,6 @@ function checkData()
             document.getElementById("signin").style.borderColor = "#1f1f68";
         }
     }
-
 </script>
 </body>
 </html>
