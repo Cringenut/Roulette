@@ -97,3 +97,18 @@ body {
 
     background-color: forestgreen;
 }
+
+input[type=amount] {
+    background-color: white;
+    border-radius:2.5em;
+
+    display: block;
+    font-family: "Helvetica", serif;
+
+    padding-left: 2.2vh;
+    font-size: 2.4vh;
+
+    height: 6vh;
+    width: 42vh;
+
+}

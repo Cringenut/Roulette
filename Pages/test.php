@@ -38,7 +38,7 @@ function checkLoginUsernameAndPassword($username, $password)
         $_SESSION['username'] = null;
     }
 }
-function getBalance($username)
+function getBalance($username): string
 {
     $conn = mysqli_connect('localhost', 'root', '', 'test_db');
 
@@ -50,5 +50,19 @@ function getBalance($username)
     return implode($sqlBalance[0]);
 }
 
+function isLogged()
+{
+    session_start();
+    if (isset($_SESSION['logged']) == null)
+    {
+        header("Location: login.php");
+    }
+}
 
-
+function isNotLogged()
+{
+    session_start();
+    if (isset($_SESSION['logged'])) {
+        header("Location: index.php");
+    }
+}

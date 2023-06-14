@@ -2,10 +2,7 @@
 
 require "test.php";
 
-session_start();
-if (isset($_SESSION['logged'])) {
-    header("Location: index.php");
-}
+isNotLogged();
 
 if (isset($_POST['email']) && isset($_POST['login']) && isset($_POST['password']))
 {

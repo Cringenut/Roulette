@@ -1,11 +1,8 @@
 <?php
 require "test.php";
 
-session_start();
-if (isset($_SESSION['logged']) == null)
-{
-    header("Location: login.php");
-}
+
+
 ?>
 
 <!DOCTYPE html>
@@ -60,7 +57,7 @@ if (isset($_SESSION['logged']) == null)
                 <?php } ?>
 
             </div>
-    </div>
+        </div>
     </div>
 
 </body>
@@ -76,14 +73,14 @@ function setNumber($i)
 {
     if (floor($i/12) == 0)
     {
-        return 3;
+        return 3+$i*3;
     }
     else if (floor($i/12) == 1)
     {
-        return 0;
+        return 2+$i%12*3;
     }
     else
     {
-        return 0;
+        return 1+$i%12*3;
     }
 }
