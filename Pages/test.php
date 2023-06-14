@@ -32,14 +32,20 @@ function checkLoginUsernameAndPassword($username, $password)
 
     if ($sqlPassword === $password)
     {
-        session_start();
+        if (session_status() != 2)
+        {
+            session_start();
+        }
         $_SESSION['logged'] = true;
         $_SESSION['username'] = $username;
         $_SESSION['bidding'] = array();
     }
     else
     {
-        session_abort();
+        if (session_status() != 2)
+        {
+            session_start();
+        }
         $_SESSION['logged'] = null;
         $_SESSION['username'] = null;
         $_SESSION['bidding'] = null;
@@ -71,7 +77,10 @@ function isLogged()
 
 function isNotLogged()
 {
-    session_start();
+    if (session_status() != 2)
+    {
+        session_start();
+    }
     if (isset($_SESSION['logged'])) {
         header("Location: index.php");
     }
@@ -79,7 +88,10 @@ function isNotLogged()
 
 function unsetBidding()
 {
-    session_start();
+    if (session_status() != 2)
+    {
+        session_start();
+    }
     if (isset($_SESSION['bidding']))
     {
         $_SESSION['bidding'] = array();
@@ -151,6 +163,13 @@ function checkRegistrationEmailAndUsername($email, $username, $password)
 
     $values = "('$username', '$password', '$email', '100'".")";
 
-    $sql = 'INSERT INTO `users` (`username`, `password`, `email`, `balance`) VALUES '.$values;
+    $sql = 'INSERT INTO `users` (`username`, `password`, `email`, `balance`) VALUES'.($values);
     $conn->query($sql);
+
+    session_start();
+    $_SESSION['logged'] = true;
+    $_SESSION['username'] = $username;
+    $_SESSION['bidding'] = array();
+
+    return true;
 }

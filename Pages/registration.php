@@ -5,20 +5,23 @@ require "test.php";
 unsetBidding();
 isNotLogged();
 
-if (isset($_POST['email']) && isset($_POST['login']) && isset($_POST['password']))
+if (isset($_POST['email']) && isset($_POST['username']) && isset($_POST['password']))
 {
     if (checkData())
     {
-        login();
-        if ($_SESSION['login'])
+        if (!isset($_SESSION['logged']))
         {
-            header("Location: index.php");
+            checkRegistrationEmailAndUsername($_POST['email'], $_POST['username'], $_POST['password']);
+            if (isset($_SESSION['logged']))
+            {
+                header("Location: index.php");
+            }
         }
     }
 }
 function checkData()
 {
-    return filter_var($_POST['email'], FILTER_VALIDATE_EMAIL) && preg_match('/^[A-Za-z0-9]*$/', $_POST['login']) && preg_match('/^[A-Za-z0-9]*$/', $_POST['password']);
+    return filter_var($_POST['email'], FILTER_VALIDATE_EMAIL) && preg_match('/^[A-Za-z0-9]*$/', $_POST['username']) && preg_match('/^[A-Za-z0-9]*$/', $_POST['password']);
 }
 
 ?>
@@ -66,7 +69,7 @@ function checkData()
 
     <input type="text" name="email" id="email" onkeyup="check(this.value);" placeholder="E-mail">
     <div class="break"></div>
-    <input type="text" name="login" id="login" onkeyup="check(this.value);" placeholder="Login">
+    <input type="text" name="username" id="username" onkeyup="check(this.value);" placeholder="Login">
     <div class="break"></div>
     <input type="text" name="password" id="password" onkeyup="check(this.value);" placeholder="Password">
 
@@ -98,7 +101,7 @@ function checkData()
     <script>
         function check()
         {
-            if (document.getElementById("email").value.length > 0 && document.getElementById("login").value.length > 0 && document.getElementById("password").value.length > 0) {
+            if (document.getElementById("email").value.length > 0 && document.getElementById("username").value.length > 0 && document.getElementById("password").value.length > 0) {
                 document.getElementById("signup").style.pointerEvents = "visible";
                 document.getElementById("signup").style.borderColor = "#ffcc00";
                 document.getElementById("textsignup").style.color = "#ffcc00";
