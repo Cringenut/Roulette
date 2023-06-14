@@ -48,22 +48,44 @@ var_dump($_SESSION['bidding']);
 
 </head>
     <body>
-    <div class="box -menu">
-        <div class="line"
+
+
+    <div class="box-menu">
         <div class="btn-logo"></div>
         <a class="btn-logo" href="index.php" target="_self">
             <div class="img-logo">
                 <img class="img-logo" src="../Visual/index/png/logo.png"  alt="logo.png"/>
             </div>
 
-            <a class="box-login" href="login.php" target="_self"></a>
-            <a class="btn-sign-up" href="registration.php" target="_self"></a>
+
+            <?php if(isset($_SESSION['logged']) == null) : ?>
+                <a class="box-login" href="login.php" target="_self"></a>
+                <a class="btn-sign-up" href="registration.php" target="_self"></a>
+            <?php else : ?>
+                <a class="" href="" target="_self"></a>
+                <div class="box-user-holder">
+
+                    <a href="account.php">
+                        <div class="both">
+                            <div class="text-username" id="account"><?php echo $_SESSION['username']?></div>
+                            <div class="text-balance" id="account"><?php
+                                echo number_format(floatval(getBalance($_SESSION['username'])), 2, '.');
+                                echo "$"?>
+                            </div>
+                        </div>
+                        <a href="logout.php">
+                            <div class="btn-log-out" id="account"></div>
+                        </a>
+
+                    </a>
+                </div>
+            <?php endif; ?>
 
 
-            <div class="box-holder">
-
+            <div class="line"></div>
     </div>
-    </div>
+
+
     <form method="post">
     <div class="box-holder">
         <input type="text" name="amount" id="amount" placeholder="PLACE YOUR BID" onkeydown="check()">
@@ -103,9 +125,23 @@ var_dump($_SESSION['bidding']);
                             <?php } ?>
 
             </div>
-                <div class="text-total-bid">TEXT</div>
         </div>
+
     </div>
+
+        <div style="position: relative; width: 0; height: 0">
+            <div class="text-total-bid" ">
+                <?php if (getTotalBid() > 0) { ?>
+                TOTAL BID <br> <?php echo number_format(getTotalBid(), 2, '.')?>$
+
+            <a href="roulette.php">
+                <div class="btn-play"></div>
+            </a>
+                <?php } ?>
+
+            </div>
+            </div>
+        </div>
 
     </form>
 

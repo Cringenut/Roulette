@@ -59,7 +59,10 @@ function getBalance($username): string
 
 function isLogged()
 {
-    session_start();
+    if (session_status() != 2)
+    {
+        session_start();
+    }
     if (isset($_SESSION['logged']) == null)
     {
         header("Location: login.php");
@@ -100,4 +103,54 @@ function checkBid($bid): bool
 function removeBid($id)
 {
     unset($_SESSION['bidding'][$id]);
+}
+
+function checkWin($winningNumber)
+{
+    if (array_key_exists($winningNumber, $_SESSION['bidding']))
+    {
+        if ($winningNumber == 0)
+        {
+            changeBalance($_SESSION['bidding'][$winningNumber]*3);
+        }
+        else
+        {
+            changeBalance($_SESSION['bidding'][$winningNumber]);
+        }
+    }
+    else
+    {
+        changeBalance(-getTotalBid());
+    }
+}
+
+function changeBalance($amount)
+{
+    $conn = mysqli_connect('localhost', 'root', '', 'test_db');
+    $username = $_SESSION['username'];
+
+    $sql = 'UPDATE users SET balance = '.(floatval(getBalance($username)) + floatval($amount)).' WHERE username='."\"$username\"";
+    $conn->query($sql);
+}
+
+function checkRegistrationEmailAndUsername($email, $username, $password)
+{
+    $conn = mysqli_connect('localhost', 'root', '', 'test_db');
+
+    $emailSql = 'SELECT email FROM users WHERE email = '."\"$email\"";
+    $usernameSql = 'SELECT username FROM users WHERE username = '."\"$username\"";
+
+    $resultEmail = $conn->query($emailSql);
+    $resultUsername = $conn->query($usernameSql);
+
+    if (mysqli_num_rows($resultEmail) > 0 || mysqli_num_rows($resultUsername) > 0)
+    {
+        return false;
+    }
+
+
+    $values = "('$username', '$password', '$email', '100'".")";
+
+    $sql = 'INSERT INTO `users` (`username`, `password`, `email`, `balance`) VALUES '.$values;
+    $conn->query($sql);
 }

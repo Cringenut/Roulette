@@ -9,7 +9,7 @@ body {
     display: flex;
 
     left: 50%;
-    top: 54%;
+    top: 44%;
 
     transform: translate(-50%, -50%);
 }
@@ -176,16 +176,40 @@ input[type=text] {
     width: 42vh;
 
     left: 50%;
-    top: 16vh;
+    top: 8vh;
 
     transform: translate(-50%, -50%);
 }
 
 .text-total-bid {
     position: relative;
+    border-radius:2.5em;
+    text-align: center;
+
+    font-family: "Bebas", serif;
+
+    padding-left: 2.2vh;
+    font-size: 3.4vh;
+
+    height: 6vh;
+    width: 42vh;
 
     left: 50%;
     top: 50%;
 
-    transform: translate(-50%, 50%);
+    transform: translate(175%, 1140%);
+}
+
+.btn-play {
+    position: absolute;
+
+    background-color: greenyellow;
+
+    height: 6vh;
+    width: 42vh;
+
+    left: 50%;
+    top: 220%;
+
+    transform: translate(-50%, -50%);
 }
