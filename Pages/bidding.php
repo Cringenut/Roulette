@@ -7,6 +7,15 @@ if (!isset($_SESSION['bidding']))
 {
     setBidding();
 }
+else
+{
+    if (isset($_POST['btn']))
+    {
+        echo "awdwa";
+        array_push($_SESSION['bidding'], $_POST['btn']);
+    }
+}
+var_dump($_SESSION['bidding']);
 
 ?>
 
@@ -47,14 +56,17 @@ if (!isset($_SESSION['bidding']))
                 <?php $red = array(0, 2, 3, 5, 6, 8, 9, 11, 13, 16, 19, 22, 24, 26, 29, 30, 32, 35);
                         for ($i = 0; $i < 36; $i++) { ?>
                             <div class="box-number-parent" id="box">
-                            <div class="box-number" id="box""></div>
+                            <div class="box-number" id="box">
+                                <form method="post">
+                                    <button <button type="submit" name="btn" class="box-number" value="<?php echo setNumber($i)?>">
+                                </form>
+                            </div>
                             <?php if (in_array($i, $red)) { ?>
                                 <div class="oval-number-red">
                             <?php } else { ?>
                                 <div class="oval-number-black">
                             <?php } ?>
                                 <div class="text-number"><?php echo setNumber($i)?></div>
-                                    <div class="element-reset" id="reset""></div>
                                 </div>
                                 </div>
                             <?php } ?>

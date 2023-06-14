@@ -67,7 +67,8 @@ function isNotLogged()
     }
 }
 
-function testHover()
+function setBidding()
 {
-    echo "Hovered";
+    $_SESSION['bidding'] = array();
 }
+
