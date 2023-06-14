@@ -37,6 +37,10 @@ body {
     height: calc(1.2*128px);
 }
 
+.box-number:hover {
+    background-color: black;
+}
+
 .oval-number-red, .oval-number-black {
     position: relative;
     width: 120px;
@@ -95,7 +99,7 @@ body {
     height: calc(100% - 10vh);
     width: 100%;
 
-    background-color: forestgreen;
+    background-color: fore stgreen;
 }
 
 input[type=amount] {

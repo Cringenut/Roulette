@@ -66,3 +66,8 @@ function isNotLogged()
         header("Location: index.php");
     }
 }
+
+function testHover()
+{
+    echo "Hovered";
+}
