@@ -10,6 +10,11 @@ if (!isset($_SESSION['bidding']))
 else
 {
     getTotalBid();
+    if (isset($_POST['res']))
+    {
+        removeBid($_POST['res']);
+    }
+
     if (isset($_POST['btn']) && isset($_POST['amount']))
     {
         if (checkBid($_POST['amount']))
@@ -63,16 +68,29 @@ var_dump($_SESSION['bidding']);
     <div class="box-holder">
         <input type="text" name="amount" id="amount" placeholder="PLACE YOUR BID" onkeydown="check()">
         <div class="flex-container-bidding">
-            <div class="box-zero"></div>
+
+
+            <button type="submit" name="btn" class="box-zero" value="0">
+                <div class="oval-number-green">
+                    <div class="text-number">0</div>
+                </div>
+                <?php if (isset($_SESSION['bidding'][0])) { ?>
+                <button type="submit" name="res" class="element-reset-zero" value="0">
+                    <?php } ?>
+            </button>
+
+
+
             <div class="flex-container-numbers">
 
                 <?php $red = array(0, 2, 3, 5, 6, 8, 9, 11, 13, 16, 19, 22, 24, 26, 29, 30, 32, 35);
                         for ($i = 0; $i < 36; $i++) { ?>
                             <div class="box-number-parent" id="box">
                             <div class="box-number" id="box">
-
-                                    <button <button type="submit" name="btn" class="box-number" value="<?php echo setNumber($i)?>">
-
+                                <?php if (isset($_SESSION['bidding'][setNumber($i)])) { ?>
+                                <button type="submit" name="res" class="element-reset" value="<?php echo setNumber($i)?>">
+                                    <?php } ?>
+                                <button type="submit" name="btn" class="box-number" value="<?php echo setNumber($i)?>">
                             </div>
                             <?php if (in_array($i, $red)) { ?>
                                 <div class="oval-number-red">
@@ -85,8 +103,10 @@ var_dump($_SESSION['bidding']);
                             <?php } ?>
 
             </div>
+                <div class="text-total-bid">TEXT</div>
         </div>
     </div>
+
     </form>
 
     <script>

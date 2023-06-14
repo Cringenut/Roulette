@@ -92,6 +92,12 @@ function checkBid($bid): bool
 {
     echo number_format(floatval($bid), 2, '.', '');
     return
-        preg_match('/^[0-9]*\.[0-9]{2}$/', number_format(floatval($bid), 2, '.', ''))
-        && (getTotalBid()+$bid <= getBalance($_SESSION['username']));
+        preg_match('/^[0-9]*\.[0-9]{2}$/', number_format(floatval($bid), 2, '.', '')) &&
+        getTotalBid()+floatval($bid) <= floatval(getBalance($_SESSION['username'])) &&
+        floatval($bid) > 0;
+}
+
+function removeBid($id)
+{
+    unset($_SESSION['bidding'][$id]);
 }

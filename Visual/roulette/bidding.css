@@ -9,7 +9,7 @@ body {
     display: flex;
 
     left: 50%;
-    top: 50%;
+    top: 54%;
 
     transform: translate(-50%, -50%);
 }
@@ -22,11 +22,15 @@ body {
 }
 
 .box-zero {
-    background-color: orange;
+    background-color: green;
     outline: red solid 4px;
 
     width: calc(1.2*100px);
     height: calc(1.2*384px);
+}
+
+.box-zero:hover {
+    background-color: yellowgreen;
 }
 
 .box-number-parent {
@@ -49,7 +53,7 @@ body {
     background-color: yellowgreen;
 }
 
-.oval-number-red, .oval-number-black {
+.oval-number-red, .oval-number-black, .oval-number-green {
     position: relative;
     width: 120px;
     height: 70px;
@@ -69,6 +73,18 @@ body {
 .oval-number-black {
     pointer-events: none;
     background-color: black;
+}
+
+.oval-number-green {
+    pointer-events: none;
+    background-color: green;
+
+    outline: #ffcc00 0.6vh solid;
+
+    left: 50%;
+    top: 8%;
+
+    transform:  translate(-50%, -50%) rotate(-90deg);
 }
 
 .text-number {
@@ -112,16 +128,31 @@ body {
 }
 
 
-.element-reset {
+.element-reset, .element-reset-zero{
     position: absolute;
 
+    background-color: transparent;
+    background-repeat: no-repeat;
+    border: none;
+    cursor: pointer;
+    overflow: hidden;
+    outline: none;
+
     background-size:100% 100%;
-    background-color: blue;
+    background-image: url("./png/x-default.png");
+    display: block;
     width: 1.8vh;
     height: 1.8vh;
 
-    top: 5.8vh;
-    left: 10.5vh;
+    transform: translate(450%, 50%);
+}
+
+.element-reset-zero {
+    transform: translate(550%, 50%);
+}
+
+.element-reset:hover {
+    background-image: url("./png/x-hovered.png");
 }
 
 input::-webkit-outer-spin-button,
@@ -150,3 +181,11 @@ input[type=text] {
     transform: translate(-50%, -50%);
 }
 
+.text-total-bid {
+    position: relative;
+
+    left: 50%;
+    top: 50%;
+
+    transform: translate(-50%, 50%);
+}
