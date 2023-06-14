@@ -9,10 +9,23 @@ if (!isset($_SESSION['bidding']))
 }
 else
 {
-    if (isset($_POST['btn']))
+    getTotalBid();
+    if (isset($_POST['btn']) && isset($_POST['amount']))
     {
-        echo "awdwa";
-        array_push($_SESSION['bidding'], $_POST['btn']);
+        if (checkBid($_POST['amount']))
+        {
+            echo "pass";
+            if (!array_key_exists($_POST['btn'], $_SESSION['bidding']))
+            {
+                echo "erre";
+                $_SESSION['bidding'][$_POST['btn']] = $_POST['amount'];
+            }
+            else
+            {
+                echo "erre1";
+                $_SESSION['bidding'][$_POST['btn']] += $_POST['amount'];
+            }
+        }
     }
 }
 var_dump($_SESSION['bidding']);
@@ -25,7 +38,6 @@ var_dump($_SESSION['bidding']);
     <meta charset="utf-8">
     <title>Bidding</title>
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
     <link href="./../Visual/roulette/bidding.css" rel="stylesheet" type="text/css">
     <link href="../Visual/menu.css" rel="stylesheet" type="text/css">
 
@@ -47,8 +59,9 @@ var_dump($_SESSION['bidding']);
 
     </div>
     </div>
+    <form method="post">
     <div class="box-holder">
-        <input type="number" name="email" id="email" placeholder="PLACE YOUR BID" onkeydown="check()">
+        <input type="text" name="amount" id="amount" placeholder="PLACE YOUR BID" onkeydown="check()">
         <div class="flex-container-bidding">
             <div class="box-zero"></div>
             <div class="flex-container-numbers">
@@ -57,9 +70,9 @@ var_dump($_SESSION['bidding']);
                         for ($i = 0; $i < 36; $i++) { ?>
                             <div class="box-number-parent" id="box">
                             <div class="box-number" id="box">
-                                <form method="post">
+
                                     <button <button type="submit" name="btn" class="box-number" value="<?php echo setNumber($i)?>">
-                                </form>
+
                             </div>
                             <?php if (in_array($i, $red)) { ?>
                                 <div class="oval-number-red">
@@ -74,6 +87,7 @@ var_dump($_SESSION['bidding']);
             </div>
         </div>
     </div>
+    </form>
 
     <script>
         function check()
@@ -119,14 +133,6 @@ function setNumber($i)
     }
 }
 
-function checkBid($id)
-{
-    if (isset($_POST['bid']))
-    {
-        $bid = $_POST['bid'];//
-        if (preg_match('/[0-9]\.[0-9]{2}$/', $bid))
-        {
-            echo $bid;
-        }
-    }
-}
+
+
+

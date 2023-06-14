@@ -15,6 +15,11 @@ if (!isset($_SESSION['password']))
     $_SESSION['balance'] = null;
 }
 
+if (!isset($_SESSION['password']))
+{
+    $_SESSION['bidding'] = null;
+}
+
 function checkLoginUsernameAndPassword($username, $password)
 {
     $conn = mysqli_connect('localhost', 'root', '', 'test_db');
@@ -30,12 +35,14 @@ function checkLoginUsernameAndPassword($username, $password)
         session_start();
         $_SESSION['logged'] = true;
         $_SESSION['username'] = $username;
+        $_SESSION['bidding'] = array();
     }
     else
     {
         session_abort();
         $_SESSION['logged'] = null;
         $_SESSION['username'] = null;
+        $_SESSION['bidding'] = null;
     }
 }
 function getBalance($username): string
@@ -67,8 +74,24 @@ function isNotLogged()
     }
 }
 
-function setBidding()
+function unsetBidding()
 {
-    $_SESSION['bidding'] = array();
+    session_start();
+    if (isset($_SESSION['bidding']))
+    {
+        $_SESSION['bidding'] = array();
+    }
 }
 
+function getTotalBid(): float
+{
+    return floatval(array_sum($_SESSION['bidding']));
+}
+
+function checkBid($bid): bool
+{
+    echo number_format(floatval($bid), 2, '.', '');
+    return
+        preg_match('/^[0-9]*\.[0-9]{2}$/', number_format(floatval($bid), 2, '.', ''))
+        && (getTotalBid()+$bid <= getBalance($_SESSION['username']));
+}

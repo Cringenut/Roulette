@@ -2,6 +2,7 @@
 
 require "test.php";
 
+unsetBidding();
 isNotLogged();
 
 if (isset($_POST['username']) && isset($_POST['password']))

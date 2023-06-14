@@ -2,6 +2,7 @@
 
 require "test.php";
 
+unsetBidding();
 isNotLogged();
 
 session_start();

@@ -129,7 +129,7 @@ input::-webkit-inner-spin-button {
     -webkit-appearance: none;
     margin: 0;}
 
-input[type=number] {
+input[type=text] {
 
     position: relative;
     border-radius:2.5em;
@@ -149,3 +149,4 @@ input[type=number] {
 
     transform: translate(-50%, -50%);
 }
+

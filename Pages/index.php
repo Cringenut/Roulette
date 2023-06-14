@@ -1,4 +1,9 @@
 <?php
+
+require "test.php";
+
+unsetBidding();
+
 ?>
 
 <!DOCTYPE html>
@@ -25,7 +30,7 @@
                 </div>
 
 
-                    <?php session_start();  if(isset($_SESSION['logged']) == null) : ?>
+                    <?php if(isset($_SESSION['logged']) == null) : ?>
                         <a class="box-login" href="login.php" target="_self"></a>
                         <a class="btn-sign-up" href="registration.php" target="_self"></a>
                     <?php else : ?>
@@ -35,7 +40,7 @@
                             <a href="account.php">
                                 <div class="both">
                                     <div class="text-username" id="account"><?php echo $_SESSION['username']?></div>
-                                    <div class="text-balance" id="account"><?php require "test.php";
+                                    <div class="text-balance" id="account"><?php
                                     echo number_format(floatval(getBalance($_SESSION['username'])), 2, '.');
                                     echo "$"?>
                                     </div>
