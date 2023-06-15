@@ -3,6 +3,16 @@ require "test.php";
 
 unsetBidding();
 isLogged();
+
+if (isset($_POST['add']))
+{
+    if (preg_match('/^[0-9]*\.[0-9]{2}$/', number_format(floatval($_POST['add']), 2, '.', '')) &&
+        floatval($_POST['add']) > 0)
+    {
+        changeBalance(floatval($_POST['add']));
+    }
+}
+
 ?>
 
 <!DOCTYPE html>
@@ -11,11 +21,21 @@ isLogged();
     <meta charset="utf-8">
     <title>Bidding</title>
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
-    <link href="./../Visual/roulette/bidding.css" rel="stylesheet" type="text/css">
+    <link href="./../Visual/account/account.css" rel="stylesheet" type="text/css">
     <link href="../Visual/menu.css" rel="stylesheet" type="text/css">
 
 </head>
 <body>
+
+<div class="img-background">
+    <img class="img-background" src="../Visual/account/account.png"  alt="logo.png"/>
+</div>
+
+<div class="text-balance">
+    <form method="post">
+        <input type="text" name="add" id="add">
+    </form>
+</div>
 
 <div class="box-menu">
     <div class="btn-logo"></div>
