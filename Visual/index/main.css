@@ -99,3 +99,7 @@ body {
     width: 75vh;
     z-index: -3;
 }
+
+*:focus {
+    outline: none;
+}

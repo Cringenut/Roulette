@@ -52,25 +52,15 @@ if (isset($_POST['add']))
             <a class="" href="" target="_self"></a>
             <div class="box-user-holder">
 
-                <a href="account.php">
-                    <div class="both">
-                        <div class="text-username" id="account"><?php echo $_SESSION['username']?></div>
-                        <div class="text-balance" id="account"><?php
-                            echo number_format(floatval(getBalance($_SESSION['username'])), 2, '.');
-                            echo "$"?>
-                        </div>
-                    </div>
-                    <a href="logout.php">
-                        <div class="btn-log-out" id="account"></div>
-                    </a>
-
-                </a>
             </div>
         <?php endif; ?>
 
 
         <div class="line"></div>
 </div>
+
+<div class="text-username-account"><?php echo $_SESSION['username']?></div>
+<div class="text-balance-account"><?php echo number_format(floatval(getBalance($_SESSION['username'])), 2, '.'); ?>$</div>
 
 </body>
 </html>

@@ -14,10 +14,15 @@
     bottom: 0;
 }
 
-input[type=text], input[type=password] {
+input[type=text] {
     position: relative;
-    background-color: white;
+
+    background-color: #1f1f68;
     border-radius:2.5em;
+    color: #ffcc00;
+    outline: 3px solid #140e4a;
+    outline-offset: -2px;
+
 
     padding-left: 2.2vh;
     font-size: 2.4vh;
@@ -25,7 +30,7 @@ input[type=text], input[type=password] {
     height: 6vh;
     width: 42vh;
 
-    left: 200%;
+    left: 195%;
     bottom: -300%;
 
     transform: translate(50%, -200%);
@@ -45,8 +50,42 @@ input[type=text], input[type=password] {
     border-color: #1f1f68;
 }
 
-.text-username {
+.text-username-account {
+    position: relative;
+    text-align: center;
 
+    display: block;
+    font-family: "Arial", serif;
+    color: #ffcc00;
+    font-size: 4.4vh;
+
+    width: auto;
+
+    left: 50%;
+
+
+    transform: translate(-50%, 500%);
 }
 
-.text-balance
+
+
+.text-balance-account {
+    position: relative;
+    text-align: center;
+
+    display: block;
+    font-family: "Bebas", serif;
+    color: #ffcc00;
+    font-size: 3.4vh;
+
+    width: auto;
+
+    left: 50%;
+
+
+    transform: translate(-50%, 600%);
+}
+
+*:focus {
+    outline: none;
+}

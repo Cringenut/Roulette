@@ -199,3 +199,7 @@ body {
 .btn-log-out:hover {
     background-image: url("../Visual/index/png/logout-hover.png");
 }
+
+*:focus {
+    outline: none;
+}

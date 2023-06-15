@@ -159,8 +159,12 @@ body {
 }
 
 input[type=text], input[type=password] {
-    background-color: white;
+    background-color: #1f1f68;
     border-radius:2.5em;
+    color: #ffcc00;
+    outline: 3px solid #140e4a;
+    outline-offset: -2px;
+
 
     padding-left: 2.2vh;
     font-size: 2.4vh;
@@ -208,4 +212,8 @@ input[type=text], input[type=password] {
     left: 50%;
 
     transform: translate(-50%, -50%);
+}
+
+*:focus {
+    outline: none;
 }
