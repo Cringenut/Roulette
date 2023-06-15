@@ -19,7 +19,7 @@ if (isset($_POST['add']))
 <html>
 <head>
     <meta charset="utf-8">
-    <title>Bidding</title>
+    <title>Golden Star: account</title>
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
     <link href="./../Visual/account/account.css" rel="stylesheet" type="text/css">
     <link href="../Visual/menu.css" rel="stylesheet" type="text/css">

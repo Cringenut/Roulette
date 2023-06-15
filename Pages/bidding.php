@@ -19,15 +19,12 @@ else
     {
         if (checkBid($_POST['amount']))
         {
-            echo "pass";
             if (!array_key_exists($_POST['btn'], $_SESSION['bidding']))
             {
-                echo "erre";
                 $_SESSION['bidding'][$_POST['btn']] = $_POST['amount'];
             }
             else
             {
-                echo "erre1";
                 $_SESSION['bidding'][$_POST['btn']] += $_POST['amount'];
             }
         }

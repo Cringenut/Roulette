@@ -105,7 +105,6 @@ function getTotalBid(): float
 
 function checkBid($bid): bool
 {
-    echo number_format(floatval($bid), 2, '.', '');
     return
         preg_match('/^[0-9]*\.[0-9]{2}$/', number_format(floatval($bid), 2, '.', '')) &&
         getTotalBid()+floatval($bid) <= floatval(getBalance($_SESSION['username'])) &&

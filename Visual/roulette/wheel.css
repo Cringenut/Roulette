@@ -54,7 +54,7 @@ body {
     display: block;
     text-align: center;
     font-family: Bebas, serif;
-    font-size: 6.4vh;
+    font-size: 6.8vh;
 
 
     width: 20vh;
@@ -63,19 +63,52 @@ body {
     left: 50%;
     top: 90%;
 
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, 2250%);
 }
 
 .btn-go-back {
     position: absolute;
-
-    background-color: greenyellow;
+    opacity: 0;
+    background-color: #1f1f68;
+    border-radius:1.5em;
+    vertical-align: middle;
+    cursor:pointer;
 
     height: 6vh;
-    width: 42vh;
+    width: 20vh;
+
+    border-style: solid;
+    border-width: 0.4vh;
+    border-color: #ffcc00;
 
     left: 50%;
     top: 6%;
 
     transform: translate(-50%, -50%);
+}
+
+.text-btn-go-back {
+    position: absolute;
+    user-select: none;
+
+    content: "";
+    display: block;
+    font-family: Bebas, serif;
+    color: #ffcc00;
+    font-size: 4.4vh;
+    overflow: hidden;
+    white-space: nowrap;
+
+    left: 50%;
+    top: 50%;
+
+    transform: translate(-50%, -50%);
+}
+
+.box-background {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+
+    background-color: forestgreen;
 }

@@ -10,7 +10,7 @@ unsetBidding();
 <html lang="en">
     <head>
         <meta charset="UTF-8">
-        <title>Golden Star</title>
+        <title>Golden Star Casino</title>
         <link href="./../Visual/index/index.css" rel="stylesheet" type="text/css">
         <link href="../Visual/menu.css" rel="stylesheet" type="text/css">
         <link href="./../Visual/index/main.css" rel="stylesheet" type="text/css">

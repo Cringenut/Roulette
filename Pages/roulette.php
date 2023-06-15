@@ -14,7 +14,7 @@ $winningSum = checkWin($winningNumber);
 <html>
 <head>
     <meta charset="utf-8">
-    <title>Bidding</title>
+    <title>ROULETTE</title>
     <link href="./../Visual/roulette/wheel.css" rel="stylesheet" type="text/css">
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
     <link href="../Visual/menu.css" rel="stylesheet" type="text/css">
@@ -22,9 +22,16 @@ $winningSum = checkWin($winningNumber);
 </head>
 <body>
 
-    <a href="endgame.php">
-        <div class="btn-go-back"></div>
-    </a>
+
+
+    <div class="box-background">
+        <a href="endgame.php">
+            <div class="btn-go-back">
+                <div class="text-btn-go-back">Back</div>
+            </div>
+        </a>
+    </div>
+
     <div class="box-holder">
         <div class="wheel"></div>
         <div class="ball"></div>
@@ -48,6 +55,7 @@ $winningSum = checkWin($winningNumber);
         {
             let winAmount = <?php echo $winningSum ?>;
             document.querySelector('.text-winnings').style.opacity = 100;
+            document.querySelector('.btn-go-back').style.opacity = 100;
             if (winAmount > 0)
             {
                 document.querySelector('.text-winnings').style.color = "greenyellow";
