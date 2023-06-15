@@ -15,4 +15,3 @@ unset($_SESSION['balance']);
 
 header("Location: index.php");
 
-session_abort();

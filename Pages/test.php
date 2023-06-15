@@ -124,15 +124,18 @@ function checkWin($winningNumber)
         if ($winningNumber == 0)
         {
             changeBalance($_SESSION['bidding'][$winningNumber]*3);
+            return $_SESSION['bidding'][$winningNumber]*3;
         }
         else
         {
             changeBalance($_SESSION['bidding'][$winningNumber]);
+            return $_SESSION['bidding'][$winningNumber];
         }
     }
     else
     {
         changeBalance(-getTotalBid());
+        return -getTotalBid();
     }
 }
 

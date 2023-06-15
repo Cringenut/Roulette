@@ -23,7 +23,7 @@ body {
 
 .box-zero {
     background-color: green;
-    outline: red solid 4px;
+    outline: #ffcc00 solid 4px;
 
     width: calc(1.2*100px);
     height: calc(1.2*384px);
@@ -35,7 +35,7 @@ body {
 
 .box-number-parent {
     background-color: pink;
-    outline: red solid 4px;
+    outline: #ffcc00 solid 4px;
 
     width: calc(1.2*85px);
     height: calc(1.2*128px);
@@ -43,7 +43,7 @@ body {
 
 .box-number {
     background-color: green;
-    outline: red solid 4px;
+    outline: #ffcc00 solid 4px;
 
     width: calc(1.2*85px);
     height: calc(1.2*128px);
@@ -124,7 +124,7 @@ body {
     height: calc(100% - 10vh);
     width: 100%;
 
-    background-color: fore stgreen;
+    background-color: forestgreen;
 }
 
 

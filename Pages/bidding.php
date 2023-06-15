@@ -33,7 +33,6 @@ else
         }
     }
 }
-var_dump($_SESSION['bidding']);
 
 ?>
 
