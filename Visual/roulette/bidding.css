@@ -127,7 +127,6 @@ body {
     background-color: forestgreen;
 }
 
-
 .element-reset, .element-reset-zero{
     position: absolute;
 
@@ -186,6 +185,8 @@ input[type=text] {
     border-radius:2.5em;
     text-align: center;
 
+    color: #ffcc00;
+
     font-family: "Bebas", serif;
 
     padding-left: 2.2vh;
@@ -202,14 +203,38 @@ input[type=text] {
 
 .btn-play {
     position: absolute;
-
-    background-color: greenyellow;
+    background-color: #1f1f68;
+    border-radius:1.5em;
+    vertical-align: middle;
+    cursor:pointer;
 
     height: 6vh;
-    width: 42vh;
+    width: 20vh;
+
+    border-style: solid;
+    border-width: 0.4vh;
+    border-color: #ffcc00;
+
+    left: 52%;
+    top: 220%;
+
+    transform: translate(-50%, -50%);
+}
+
+.text-play {
+    position: absolute;
+    user-select: none;
+
+    content: "SIGN IN";
+    display: block;
+    font-family: Bebas, serif;
+    color: #ffcc00;
+    font-size: 4.4vh;
+    overflow: hidden;
+    white-space: nowrap;
 
     left: 50%;
-    top: 220%;
+    top: 50%;
 
     transform: translate(-50%, -50%);
 }

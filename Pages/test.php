@@ -163,7 +163,6 @@ function checkRegistrationEmailAndUsername($email, $username, $password)
         return false;
     }
 
-
     $values = "('$username', '$password', '$email', '100'".")";
 
     $sql = 'INSERT INTO `users` (`username`, `password`, `email`, `balance`) VALUES'.($values);

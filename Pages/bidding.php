@@ -40,7 +40,7 @@ else
 <html>
 <head>
     <meta charset="utf-8">
-    <title>Bidding</title>
+    <title>Golden Star: bidding</title>
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
     <link href="./../Visual/roulette/bidding.css" rel="stylesheet" type="text/css">
     <link href="../Visual/menu.css" rel="stylesheet" type="text/css">
@@ -134,7 +134,9 @@ else
                 TOTAL BID <br> <?php echo number_format(getTotalBid(), 2, '.')?>$
 
             <a href="roulette.php">
-                <div class="btn-play"></div>
+                <div class="btn-play">
+                    <div class="text-play">Play</div>
+                </div>
             </a>
                 <?php } ?>
 

@@ -37,7 +37,7 @@ function checkData()
 <link href="../Visual/login/login.css" rel="stylesheet" type="text/css">
 
 <div class="img-background">
-    <img class="img-background" src="../Visual/login/png/login. png"  alt="logo.png"/>
+    <img class="img-background" src="../Visual/login/png/login.png"  alt="logo.png"/>
 </div>
 
 <a class="" href="index.php" target="_self">
